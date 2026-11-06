@@ -1,0 +1,684 @@
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>PGIMER Nursing Officer Editorial Blueprint</title>
+<style>
+/* ==========================================================================
+   FOUNDATION & LAYOUT DEFENSE (Strict Constraints)
+========================================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    overflow-x: hidden;
+    background-color: #111111;
+    font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+body { display: block; margin: 0; }
+
+/* Cinematic Lighting & Textural Background */
+.monolith-wrapper {
+    max-width: 560px;
+    margin: 0 auto;
+    background: #FAFAFA;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,1) 0%, rgba(240,240,240,0.4) 70%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    min-height: 100vh;
+    box-shadow: 0 0 60px rgba(0,0,0,0.5);
+    padding-bottom: 60px;
+    position: relative;
+    border-left: 1px solid #EAEAEA;
+    border-right: 1px solid #EAEAEA;
+}
+
+/* ==========================================================================
+   PREMIUM TYPOGRAPHY & HEADER SCENE
+========================================================================== */
+.hero-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    filter: contrast(1.05) saturate(1.1);
+}
+
+.editorial-header {
+    padding: 40px 24px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.label-micro {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF2A5F;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.title-dramatic {
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    color: #111111;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.subtitle-sleek {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto 30px;
+    font-weight: 500;
+}
+
+/* Live Analytics Aesthetic */
+.live-analytics-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.recording-dot {
+    width: 6px;
+    height: 6px;
+    background: #D4FF00;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(212, 255, 0, 0.8); }
+    50% { opacity: 0.3; box-shadow: none; }
+}
+
+/* ==========================================================================
+   GRID NAVIGATION (The Small Route Tabs)
+========================================================================== */
+.navigation-matrix {
+    padding: 0 24px 20px;
+}
+
+.matrix-header {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.matrix-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.matrix-node {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: ui-monospace, "SF Mono", monospace;
+    font-weight: 700;
+    color: #888;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.matrix-node:active { transform: scale(0.9); }
+.matrix-node.completed { background: #F0F0F0; border-color: #E0E0E0; color: #BBB; }
+.matrix-node.active {
+    background: #111;
+    border-color: #111;
+    color: #D4FF00;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   THE CUBE ENGINE (3D Rotation Mechanics)
+========================================================================== */
+.cube-viewport {
+    perspective: 2000px;
+    width: 100%;
+    padding: 20px 24px;
+    position: relative;
+    transition: height 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.cube-assembly {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 24px; right: 24px;
+    width: calc(100% - 48px);
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateZ(calc(var(--cw-half, 200px) * -1)) rotateY(0deg);
+}
+
+.cube-face {
+    position: absolute;
+    width: 100%;
+    top: 0; left: 0;
+    backface-visibility: hidden;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+    border-radius: 4px;
+    padding: 24px;
+    visibility: hidden;
+}
+
+.cube-face.active { visibility: visible; }
+.face-front { transform: rotateY(0deg) translateZ(var(--cw-half, 200px)); }
+.face-right { transform: rotateY(90deg) translateZ(var(--cw-half, 200px)); }
+.face-left { transform: rotateY(-90deg) translateZ(var(--cw-half, 200px)); }
+
+/* ==========================================================================
+   EDITORIAL TIMELINE CONTENT
+========================================================================== */
+.face-header {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #111;
+    line-height: 1.1;
+}
+
+.timeline-segment {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+.timeline-segment:last-child { border-bottom: none; }
+
+.time-col {
+    flex: 0 0 115px; /* Increased to accommodate larger font */
+    padding-right: 16px;
+    font-family: ui-monospace, "SF Mono", monospace;
+    font-size: 12px; /* Increased timing font size */
+    font-weight: 800;
+    color: #666;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.content-col {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+.content-col strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 4px;
+    letter-spacing: -0.2px;
+}
+
+/* ==========================================================================
+   MINIATURIZED MAHAPACK CARD
+========================================================================== */
+.premium-ad-container {
+    padding: 40px 24px;
+}
+
+.micro-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.micro-card::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 80% 20%, rgba(255,42,95,0.15) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.mc-content { flex: 1; z-index: 2; }
+.mc-tag {
+    display: inline-block;
+    background: #D4FF00;
+    color: #111;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.mc-title {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #FFF;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+.mc-cta {
+    display: inline-block;
+    background: #FFF;
+    color: #111;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    transition: transform 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+.mc-cta:active { transform: scale(0.95); }
+
+.mc-visual {
+    flex: 0 0 100px;
+    z-index: 2;
+}
+.mc-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ==========================================================================
+   THE LIQUID PRISM MONOLITH WIDGET
+========================================================================== */
+.widget-showcase { padding: 0 24px 40px; margin: 0 auto; }
+
+@keyframes spinPrism { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes morphLiquid {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-50%, -50%) rotate(0deg); }
+    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: translate(-48%, -52%) rotate(10deg); }
+    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: translate(-52%, -48%) rotate(-10deg); }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-50%, -50%) rotate(0deg); }
+}
+@keyframes sweepShimmer { 0% { background-position: 200% center; } 100% { background-position: -200% center; } }
+@keyframes pulseDotWidget {
+    0% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4); }
+    70% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 6px rgba(52, 199, 89, 0); }
+    100% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 0 rgba(52, 199, 89, 0); }
+}
+@keyframes scaleBounce { 0% { transform: scale(1); } 50% { transform: scale(1.3); color: #007aff; } 100% { transform: scale(1); } }
+
+.lpm-scene { perspective: 1200px; width: 100%; height: 140px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.lpm-card { width: 100%; height: 100%; position: relative; transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1); transform-style: preserve-3d; border-radius: 12px; box-shadow: 0 14px 35px rgba(0,0,0,0.06); }
+.lpm-scene:active .lpm-card { transform: scale(0.96); }
+.lpm-scene.copied .lpm-card { transform: rotateX(180deg); }
+.lpm-face { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 12px; overflow: hidden; }
+.lpm-back { transform: rotateX(180deg); background: #111; }
+
+.prism-border {
+    position: absolute; top: 50%; left: 50%; width: 250%; height: 250%;
+    background: conic-gradient(from 0deg, transparent 0%, #111 15%, transparent 30%, #FF2A5F 50%, transparent 65%, #D4FF00 85%, transparent 100%);
+    animation: spinPrism 5s linear infinite; z-index: 0;
+}
+.lpm-glass {
+    position: absolute; inset: 2px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+}
+.lpm-back .lpm-glass { background: rgba(17, 17, 17, 0.95); }
+
+.liquid-blob {
+    position: absolute; top: 50%; left: 50%; width: 180px; height: 180px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(255, 42, 95, 0.05));
+    filter: blur(15px); animation: morphLiquid 8s ease-in-out infinite; z-index: 1; pointer-events: none;
+}
+.lpm-content { position: relative; z-index: 2; text-align: center; width: 100%; padding: 0 16px; }
+.live-status-bar {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #FAFAFA; border: 1px solid #EAEAEA; padding: 4px 10px; border-radius: 20px; margin-bottom: 8px;
+}
+.status-dot {
+    width: 6px; height: 6px; background-color: #34c759; border-radius: 50%;
+    animation: pulseDotWidget 2s infinite; flex-shrink: 0;
+}
+.status-text { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #111; }
+.dynamic-number { display: inline-block; color: #FF2A5F; font-size: 11px; }
+.dynamic-number.bouncing { animation: scaleBounce 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+.shimmer-phone {
+    font-size: 28px; font-weight: 900; letter-spacing: -1px;
+    background: linear-gradient(to right, #111 20%, #888 50%, #111 80%);
+    background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: sweepShimmer 4s linear infinite; margin-bottom: 6px; font-feature-settings: "tnum";
+}
+.action-hint { font-size: 10px; font-weight: 700; text-transform: uppercase; color: #999; letter-spacing: 0.5px; }
+.back-content { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #ffffff; }
+
+/* Pure CSS Icon */
+.back-icon-css {
+    width: 20px; height: 20px; margin-bottom: 12px; animation: pulseDotWidget 1.5s infinite;
+    border-radius: 50%; border: 2px solid #D4FF00; position: relative;
+}
+.back-icon-css::after {
+    content: ''; position: absolute; top: 2px; left: 6px; width: 4px; height: 9px;
+    border: solid #D4FF00; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.back-title { font-size: 16px; font-weight: 800; letter-spacing: 1px; color: #D4FF00; text-transform: uppercase; }
+.back-subtitle { font-size: 11px; color: #999; margin-top: 6px; font-weight: 500; line-height: 1.5; text-transform: uppercase; }
+</style>
+
+
+
+<div class="monolith-wrapper">
+    
+    <!-- HEADER -->
+    <img class="hero-banner" src="https://www.adda247.com/jobs/wp-content/uploads/2026/10/15160849/Extended-20-Day-Nursing-Study-Routine.png" alt="Editorial Blueprint Banner">
+    
+    <header class="editorial-header">
+        <span class="label-micro">The Final Sprint</span>
+        <h1 class="title-dramatic">20-Day Blueprint</h1>
+        <p class="subtitle-sleek">An uncompromised hour-by-hour operational matrix to master PGIMER competencies, build speed, and destroy negative marking.</p>
+        
+        <div class="live-analytics-pill">
+            <div class="recording-dot"></div>
+            <span id="total-aspirants">1,025</span> &nbsp;Viewing Now
+        </div>
+    </header>
+
+    <!-- NAVIGATION MATRIX (Small Tabs) -->
+    <nav class="navigation-matrix">
+        <div class="matrix-header">Select Operational Day</div>
+        <div class="matrix-grid" id="route-grid">
+            <!-- Rendered by JS -->
+        </div>
+    </nav>
+
+    <!-- CUBE VIEWPORT -->
+    <div class="cube-viewport" id="cube-viewport">
+        <div class="cube-assembly" id="cube-assembly">
+            <!-- Active Face -->
+            <div class="cube-face face-front active" id="face-current"></div>
+            <!-- Staging Face for Transition -->
+            <div class="cube-face face-right" id="face-staging"></div>
+        </div>
+    </div>
+
+    <!-- MINIATURIZED MAHAPACK CARD -->
+    <section class="premium-ad-container">
+        <div class="micro-card">
+            <div class="mc-content">
+                <span class="mc-tag">Trending</span>
+                <h3 class="mc-title">Nursing<br>Mahapack</h3>
+                <a href="https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?srsltid=AfmBOoopXwqjjPAsRkk5ZeHPCul2tP14lKi9nRHIw_NA06Z72vynISXX&amp;productId=90881" class="mc-cta" target="_blank">Access Setup</a>
+            </div>
+            <div class="mc-visual">
+                <img src="https://st.adda247.com/https://storeimages.adda247.com/883721788416574.png" alt="Nursing Mahapack">
+            </div>
+        </div>
+    </section>
+
+    <!-- THE LIQUID PRISM WIDGET -->
+    <div class="widget-showcase">
+        <div class="lpm-scene" onclick="executeDialerAction(this, '09240231061')">
+            <div class="lpm-card">
+                <div class="lpm-face lpm-front">
+                    <div class="prism-border"></div>
+                    <div class="lpm-glass">
+                        <div class="liquid-blob"></div>
+                        <div class="lpm-content">
+                            <div class="live-status-bar">
+                                <div class="status-dot"></div>
+                                <div class="status-text">
+                                    <span class="dynamic-number" id="counsellor-count">5</span> Experts Active
+                                </div>
+                            </div>
+                            <div class="shimmer-phone">09240231061</div>
+                            <div class="action-hint">Tap To Open Dialer Instantly</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lpm-face lpm-back">
+                    <div class="prism-border" style="animation-direction: reverse; background: conic-gradient(from 0deg, transparent 0%, #D4FF00 20%, transparent 40%, #FF2A5F 60%, transparent 80%);"></div>
+                    <div class="lpm-glass">
+                        <div class="lpm-content back-content">
+                            <div class="back-icon-css"></div>
+                            <div class="back-title">Routing Call</div>
+                            <div class="back-subtitle">Launching secure dialer<br>Stand by</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// ==========================================================================
+// DATA PAYLOAD
+// ==========================================================================
+const routineData = [
+    { day: 1, title: "Cardiovascular & Respiratory Systems", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: ABG interpretation (compensation mechanisms), acute coronary syndrome protocols, MI ECG changes (STEMI vs. NSTEMI), and heart failure classifications (NYHA)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: Solve 100 practice MCQs strictly on cardiac emergencies, ventilator modes (AC, SIMV, PEEP), and chest tube drainage management (water seal chamber fluctuations)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Document root causes for missed questions; review the pharmacology of Digoxin, Nitroglycerin, and emergency inotropes." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #1: 100 Questions in 100 Minutes (timed, mixed-subject baseline test)." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Calculate net score with negative marking (-wrong answers x 0.25). Identify weak clinical areas." }, { time: "05:00 PM – 07:00 PM", focus: "Anatomy & Pathophysiology Link: Cardiac conduction system, pulmonary circulation pathways, and COPD nursing interventions." }, { time: "08:30 PM – 09:30 PM", focus: "Visual & High-Yield Drill: ECG rhythm strips (Ventricular Tachycardia, Ventricular Fibrillation, Atrial Fibrillation) and pacemaker modes." } ] },
+    { day: 2, title: "Neurological & Renal Systems", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Glasgow Coma Scale (scoring breakdowns), ICP monitoring (Cushing's Triad), acute stroke protocols (tPA criteria, window period), and spinal cord injury shock patterns." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: Practice 100 MCQs covering acute kidney injury (prerenal, intrarenal, postrenal), dialysis complications (disequilibrium syndrome), and electrolyte shifts." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Clarify neurological assessment steps (cranial nerve tests) and peritoneal dialysis nursing management." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #2: 100 Questions in 100 Minutes. Focus strictly on pacing (1 minute per question)." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Isolate questions marked in doubt. Evaluate whether eliminating options reduced penalty losses." }, { time: "05:00 PM – 07:00 PM", focus: "Renal Fluid & Electrolyte Dynamics: Hypokalemia vs. hyperkalemia ECG alterations; calculation of fluid deficits and glomerular filtration rate (GFR) stages." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Cranial nerve testing diagrams, neurological reflex testing sites, and urinary catheter types/sizes." } ] },
+    { day: 3, title: "Gastrointestinal, Hepatic & Endocrine", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Acute pancreatitis (Ranson's criteria), liver cirrhosis complications (hepatic encephalopathy, esophageal varices, Sengstaken-Blakemore tube care), and peptic ulcer disease." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 targeted MCQs on diabetic emergencies (DKA vs. HHS), thyroid crisis, Addisonian crisis, and Cushing's syndrome." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Review endocrine negative feedback loops; differentiate insulin types (onset, peak, duration profiles)." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #3: 100 Questions in 100 Minutes. Focus on avoiding unforced errors on negative-phrased stems (EXCEPT, NOT)." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Catalog all pharmacology and nursing intervention mistakes into your personal error ledger." }, { time: "05:00 PM – 07:00 PM", focus: "Endocrine Pharmacology & Clinical Skills: Stoma care, TPN (Total Parenteral Nutrition) management, and central line catheter complications (air embolism protocols)." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Lab values flashcards (Amylase, Lipase, HbA1c, Serum Osmolality, Cortisol levels)." } ] },
+    { day: 4, title: "Oncology, Burns & Perioperative", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Burn assessment (Rule of Nines), fluid resuscitation calculations (Parkland Formula), oncologic emergencies (Superior Vena Cava Syndrome, Tumor Lysis Syndrome)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering radiation safety, chemotherapy extravasation management, surgical safety checklists (WHO checklist), and anesthesia types/recovery." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Calculate burn replacement volumes step-by-step; review TNM cancer staging and surgical consent legalities." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #4: 100 Questions in 100 Minutes. Track time splits: aim for 50 questions answered per 45 minutes." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Evaluate surgical positioning errors and triage scoring missteps." }, { time: "05:00 PM – 07:00 PM", focus: "Perioperative Core Concepts: Postoperative complications (atelectasis, DVT, wound dehiscence vs. evisceration management), sterilizers, and OT zoning rules." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Surgical instruments (clamps, retractor varieties, suture needles) and specialized dressings." } ] },
+    { day: 5, title: "Fundamentals of Nursing & Procedures", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Vital signs abnormalities, temperature regulation mechanisms, oxygen delivery devices (Venturi mask flow rates/percentages), and blood transfusion reactions." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: Solve 100 MCQs on catheterization techniques, enema administration, nasogastric tube insertion/verification methods, and pressure ulcer staging (NPUAP)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Review nursing process steps (assessment vs. evaluation), nursing diagnoses conventions (NANDA), and transfusion reaction steps." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #5: 100 Questions in 100 Minutes. Pay special attention to clinical prioritization questions." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Analyze how effectively you applied the ABC (Airway, Breathing, Circulation) framework to priority items." }, { time: "05:00 PM – 07:00 PM", focus: "Patient Positioning & Safety: Ergonomics, moving/handling techniques, fall prevention protocols, and restraints regulations." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Patient positions (Fowler's, Trendelenburg, Sims', Lithotomy, Prone) and their respective surgical and therapeutic indications." } ] },
+    { day: 6, title: "Infection Control, BMW & Legal Nursing", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Biomedical Waste Management (BMWM) Rules (latest Indian Gazette rules: Yellow, Red, White, Blue categories), hospital-acquired infections (VAP, CAUTI, CLABSI)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering hand hygiene steps (WHO 5 Moments), PPE donning/doffing order, needle-stick injury management, and post-exposure prophylaxis (PEP)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Re-verify biomedical waste color codes for specific items (e.g., blood bags, anatomical waste, glass vials, metallic implants)." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #6: 100 Questions in 100 Minutes. Practice marking suspected questions for a secondary review." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Assess whether review-flagged questions improved or degraded overall accuracy." }, { time: "05:00 PM – 07:00 PM", focus: "Nursing Ethics & Medico-Legal Framework: Autonomy, beneficence, non-maleficence, justice, negligence vs. malpractice, informed consent, and Consumer Protection Act provisions." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: BMWM symbol identification, chemical disinfectant concentration tables, and sterilization indicator cards (Bowie-Dick test)." } ] },
+    { day: 7, title: "Obstetrics – Antenatal Care", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Physiological changes in pregnancy, calculation of EDD (Naegele's rule), GTPAL scoring, diagnosis of pregnancy, and routine antenatal visits." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering fetal monitoring (NST, CST, biophysical profile), non-reassuring fetal status, amniotic fluid abnormalities (polyhydramnios/oligohydramnios)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Clarify early vs. late vs. variable fetal heart rate decelerations and immediate bedside nursing actions." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #7: 100 Questions in 100 Minutes. Enforce disciplined decision-making: skip questions that fall outside your knowledge base." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Identify OB-GYN question performance and verify terminologies (gestational diabetes screening thresholds)." }, { time: "05:00 PM – 07:00 PM", focus: "Complications of Early Pregnancy: Hyperemesis gravidarum, ectopic pregnancy, abortion types/management, and gestational trophoblastic disease (hydatidiform mole)." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Pelvic types (Gynecoid, Android, Anthropoid, Platypelloid), fetal skull landmarks, diameters, and fontanelles." } ] },
+    { day: 8, title: "Intrapartum & High-Risk Obstetrics", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Stages of labor, physiological mechanisms of labor (cardinal movements), partograph plotting (alert and action lines), and induction of labor (Bishop score)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs on obstetric emergencies: Postpartum Hemorrhage (PPH management, uterotonics), Eclampsia (MgSO4 regimen and toxicity signs), and cord prolapse." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Calculate MgSO4 therapeutic levels, signs of patellar reflex loss, and Calcium Gluconate dosage calculations." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #8: 100 Questions in 100 Minutes. Review your test-taking stamina and focus during the final 20 minutes." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Review incorrect obstetric clinical scenarios and labor progression interpretations." }, { time: "05:00 PM – 07:00 PM", focus: "Postnatal Care & Contraception: Lochia variations, puerperal sepsis, breast engorgement/mastitis, postpartum blues vs. depression, and modern family planning methods (IUCDs, injectable options)." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Partograph patterns, obstetric forceps types, episiotomy instruments, and vacuum extraction cups." } ] },
+    { day: 9, title: "Child Health & Neonatology", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Developmental milestones (motor, cognitive, language, social), primitive reflexes (Moro, rooting, palmar, tonic neck), and developmental screening tools." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering neonatal resuscitation algorithms (NRP), APGAR score interpretation, premature infant care, and Kangaroo Mother Care (KMC)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Address age-specific developmental delays, teething schedules, and fontanelle closure timelines." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #9: 100 Questions in 100 Minutes. Audit time management: target spending no more than 40 seconds on memory-recall questions." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Audit pediatric dosages and weight-based calculation questions." }, { time: "05:00 PM – 07:00 PM", focus: "Neonatal Conditions: Pathological vs. physiological jaundice, phototherapy nursing care, exchange transfusions, respiratory distress syndrome (RDS), and meconium aspiration." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: APGAR tables, normal neonatal vitals, birth weight doubling/tripling rules, and head circumference changes." } ] },
+    { day: 10, title: "Pediatric Disorders & Immunization", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Congenital anomalies (Tracheoesophageal fistula, Spina bifida, Anorectal malformations, Hirschsprung's disease) and congenital heart diseases (cyanotic vs. acyanotic: TOF, VSD, ASD, PDA)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs on acute diarrhea (IMNCI guidelines, ORS composition), croup, epiglottitis, asthma in children, and nephrotic syndrome vs. acute glomerulonephritis." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Re-verify tetralogy of Fallot spells (hypercyanotic episodes) and immediate positioning actions (knee-chest)." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #10: 100 Questions in 100 Minutes (Milestone test: Compare accuracy vs. Day 1)." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Evaluate if negative scores are decreasing. Adjust risk tolerance on borderline questions." }, { time: "05:00 PM – 07:00 PM", focus: "Immunization Protocol: National Immunization Schedule of India (latest schedule: BCG, OPV, Pentavalent, Rotavirus, fIPV, MR, PCV, JE), route, site, dose, and cold chain maintenance (ILR, Deep Freezer)." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Cold chain equipment (Vaccine Carrier, Dial Thermometer), vaccine vial monitor (VVM) stages, and pediatric clinical presentations." } ] },
+    { day: 11, title: "Mental Health Nursing & Therapies", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Psychopathology, defense mechanisms, schizophrenia symptoms (positive vs. negative, Schneiderian first-rank symptoms), and mood disorders (major depressive disorder, bipolar affective disorder)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering anxiety disorders, OCD, conversion disorder, suicide risk assessment, and psychiatric emergencies (neuroleptic malignant syndrome, delirium tremens)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Differentiate delusions vs. hallucinations vs. illusions; clarify suicide precaution protocols." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #11: 100 Questions in 100 Minutes. Maintain test-center pacing: stay seated for the entire 100 minutes without disruptions." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Evaluate communication technique errors in psychiatry questions." }, { time: "05:00 PM – 07:00 PM", focus: "Therapeutic Modalities: Electroconvulsive Therapy (ECT: indications, pre-op, intra-op, post-op care, contraindications), therapeutic nurse-patient relationship phases, and Mental Healthcare Act (provisions)." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Defense mechanism real-life clinical scenarios and behavioral therapy terms (systematic desensitization, aversion therapy)." } ] },
+    { day: 12, title: "Psychiatric Pharmacology & Substance Use", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Antipsychotics (typical vs. atypical, Extrapyramidal Symptoms: acute dystonia, akathisia, Parkinsonism, tardive dyskinesia), and mood stabilizers (Lithium toxicity signs and therapeutic range)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering antidepressants (SSRIs, Tricyclics, MAOIs - dietary tyramine restrictions), anxiolytics, and substance use disorders (Alcohol withdrawal phases, CIWA scale)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Memorize exact therapeutic levels of Lithium (0.6 - 1.2 mEq/L) and immediate interventions for toxicity." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #12: 100 Questions in 100 Minutes. Work on identifying distractors designed to tempt hasty answers." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Record missed drug calculations or confusing drug classification questions." }, { time: "05:00 PM – 07:00 PM", focus: "Cognitive & Child Psychiatric Disorders: Dementia vs. delirium differential diagnosis, Alzheimer's pathology/care, Autism spectrum disorder, ADHD, and conduct disorders." }, { time: "08:30 PM – 09:30 PM", focus: "Visual & Concept Drill: EPS symptom identification, abnormal involuntary movement scales (AIMS), and psychiatric pharmacology summary tables." } ] },
+    { day: 13, title: "Community Health & Epidemiology", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Concepts of health and disease, levels of prevention (primordial, primary, secondary, tertiary with clinical examples), epidemiological triad, and dynamics of disease transmission." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering vital statistics (IMR, MMR, Under-5 mortality, crude birth rate formulas), disease screening tests (sensitivity, specificity, positive predictive value)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Solve epidemiological math problems: calculate incidence vs. prevalence rates, and population sample ratios." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #13: 100 Questions in 100 Minutes. Maintain deliberate pacing across all sections." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Check epidemiology formulas; log all incorrect definitions." }, { time: "05:00 PM – 07:00 PM", focus: "Health Systems in India: Structure of Primary Health Centres (PHC), Community Health Centres (CHC), Sub-Centres (staffing norms, population criteria for plain vs. hilly/tribal areas), and IPHS guidelines." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Population coverage figures for Sub-Centre, PHC, CHC, and ASHA/ANM operational roles." } ] },
+    { day: 14, title: "National Health Programs & Environment", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Key National Health Programs: National Health Mission (NHM), NTEP (TB elimination strategy, DOTS, treatment regimens), NVBDCP (vector-borne diseases), and NACP (HIV/AIDS strategies)." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering Reproductive, Maternal, Newborn, Child, and Adolescent Health (RMNCH+A), Ayushman Bharat (HWCs and PM-JAY targets), and water purification steps." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Update notes on current targets, disease elimination years, and newly launched central health initiatives." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #14: 100 Questions in 100 Minutes. Track question selection: aim for an initial pass of 65+ confident answers within 50 minutes." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Identify recurring knowledge gaps in community health program guidelines." }, { time: "05:00 PM – 07:00 PM", focus: "Environmental Sanitation & Occupational Health: Water quality tests (orthotolidine test, chlorination levels), disposal of solid waste (sanitary landfills, composting), and occupational pneumoconiosis." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Water testing apparatus (Chloroscope), vector identification (Anopheles, Culex, Aedes mosquitoes), and environmental hygiene diagrams." } ] },
+    { day: 15, title: "Pharmacology & Dosage Calculations", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Pharmacokinetics and pharmacodynamics principles, routes of administration, bioavailability, high-alert medications, antidote mechanisms, and adverse drug reactions." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & Calculations: 100 practice problems: IV drip rate calculations (drops/min, micro-drip vs. macro-drip), pediatric dose equations (Clark's, Young's rules), and unit conversions (mg to mcg, IU)." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Identify and resolve math calculation errors; verify drop factors (15 drops/mL vs. 60 drops/mL)." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #15: 100 Questions in 100 Minutes. Pay special attention to calculation accuracy under time pressure." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Confirm that drug arithmetic was solved without rushing or misplacing decimal points." }, { time: "05:00 PM – 07:00 PM", focus: "Antidotes & Antimicrobial Therapy: Antibiotic classes, mechanism of resistance, side effects (Ototoxicity, Nephrotoxicity, Red Man syndrome), and specific antidotes for common overdoses." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Complete Antidote Table (Heparin -> Protamine Sulfate, Warfarin -> Vitamin K, Paracetamol -> N-acetylcysteine, Opioids -> Naloxone, etc.)." } ] },
+    { day: 16, title: "Nutrition, Dietetics & Microbiology", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Macronutrients vs. Micronutrients, calorific values, protein-energy malnutrition (Kwashiorkor vs. Marasmus), vitamin deficiency syndromes, and clinical features of mineral imbalances." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs covering therapeutic diets (low-sodium, renal, diabetic, ketogenic, low-purine), sterilization methods (Autoclave settings, Hot air oven parameters), and disinfectants." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Review autoclave operation parameters (121°C at 15 psi for 15–20 min) and culture media types." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #16: 100 Questions in 100 Minutes. Ensure steady pacing across both major and minor subjects." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Check accuracy on basic science and nutritional requirement questions." }, { time: "05:00 PM – 07:00 PM", focus: "Microbiology Principles: Gram-positive vs. Gram-negative organisms, spore-forming bacteria, immunology basics (innate vs. acquired immunity, antibodies structure/functions: IgG, IgM, IgA, IgE, IgD)." }, { time: "08:30 PM – 09:30 PM", focus: "Visual Drill: Vitamin deficiency signs (Bitot's spots, rickets, scurvy, pellagra) and Gram-stain microscopy profiles." } ] },
+    { day: 17, title: "Emergency Nursing & Anatomy Highlights", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Basic Life Support (BLS) and Advanced Cardiac Life Support (ACLS) guidelines, compression-to-ventilation ratios for adult/child/infant, defibrillator safety, and shock classifications." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs on emergency triage color tags (Red, Yellow, Green, Black), choking management (Heimlich maneuver), acute poisoning protocols, and fracture stabilization." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Clarify differences between automated external defibrillator (AED) operation steps and manual defibrillator synchronized cardioversion." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #17: 100 Questions in 100 Minutes. Practice maintaining calm focus and minimizing second-guessing." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Audit performance on triage classifications and immediate emergency actions." }, { time: "05:00 PM – 07:00 PM", focus: "Anatomical Landmarks & High-Yield Physiology: Spinal tap needle insertion levels, cardiac valve auscultation sites, cranial nerves origins, and musculoskeletal angles." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Triage scenario flashcards, BLS algorithm sequence steps, and choking relief maneuvers." } ] },
+    { day: 18, title: "Nursing Management, Research & Computers", slots: [ { time: "07:00 AM – 09:00 AM", focus: "Core Theory: Principles of management (Fayol), leadership styles, staffing norms, duty roistering, material management (ABC, VED analysis), quality assurance, and audit processes." }, { time: "09:30 AM – 11:30 AM", focus: "Clinical Application & MCQs: 100 MCQs on nursing research steps, sampling techniques (probability vs. non-probability), research designs, measures of central tendency (Mean, Median, Mode), and standard deviation." }, { time: "11:30 AM – 12:30 PM", focus: "Error Analysis: Clarify standard normal distribution characteristics, type I vs. type II errors, and validity vs. reliability." }, { time: "01:30 PM – 03:10 PM", focus: "Full-Length CBT Simulation #18: 100 Questions in 100 Minutes. Aim for final testing benchmark: target score >75% with <10 incorrect answers." }, { time: "03:10 PM – 04:00 PM", focus: "Simulation Post-Mortem: Review administrative, leadership, and computer application errors." }, { time: "05:00 PM – 07:00 PM", focus: "Computer Applications in Healthcare: Basics of hardware, memory, networking, Hospital Information Systems (HIS), electronic medical records (EMR), telemedicine, and health informatics security." }, { time: "08:30 PM – 09:30 PM", focus: "Rapid Fire Review: Research terminology definitions, sampling method flowcharts, and keyboard shortcut matrices." } ] },
+    { day: 19, title: "High-Yield Synthesis & Error-Log Eradication", slots: [ { time: "07:00 AM – 09:30 AM", focus: "Comprehensive Error Review: Work through your consolidated error log from Days 1 to 18. Re-solve questions that you previously missed." }, { time: "10:00 AM – 12:00 PM", focus: "High-Yield Clinical Numbers: Review normal blood chemistry values, therapeutic drug ranges, normal arterial blood gas ranges, pediatric vitals, and obstetric landmark measures." }, { time: "01:30 PM – 03:10 PM", focus: "Final Mini-Speed Simulation: Take a 100-question mixed high-yield drill with a tightened 90-minute timer to build a comfortable speed cushion for exam day." }, { time: "03:10 PM – 04:00 PM", focus: "Final Timing Audit: Confirm that your pace consistently leaves an 8- to 10-minute buffer for a final pass." }, { time: "05:00 PM – 07:00 PM", focus: "Visual Consolidation: Review image sets for medical and surgical instruments, emergency trays, ECG rhythms, and anatomical cross-sections." }, { time: "08:30 PM – 09:30 PM", focus: "Night Review: Read through key formula sheets, the BMWM color scheme, and immunization schedules one last time." } ] },
+    { day: 20, title: "Pre-Exam Conditioning & Calibrated Rest", slots: [ { time: "08:00 AM – 10:00 AM", focus: "Gentle Memory Refresh: Read through one-page summary notes for the highest-yield subjects: Fundamentals, Med-Surg priority actions, and Obstetric emergencies." }, { time: "10:30 AM – 12:00 PM", focus: "Core Fact Scan: Scan normal laboratory ranges, antidote tables, and the Rule of Nines. No new questions or mock tests." }, { time: "12:00 PM – 01:30 PM", focus: "Nutritious Lunch & Relaxation: Step away from all study materials. Shift focus to physical rest." }, { time: "02:00 PM – 04:00 PM", focus: "Administrative Preparations: Print your admit card, verify your CBT exam center location and reporting time, organize original photo ID cards, and prep your travel plan." }, { time: "04:00 PM – 06:00 PM", focus: "Light Physical Activity: Take a brisk walk or do light stretching to lower stress levels." }, { time: "06:00 PM Onward", focus: "Complete Study Shutdown: Pack your exam pouch. Enjoy a light dinner and aim for 8 hours of sleep to ensure peak mental sharpness for the exam." } ] }
+];
+
+// ==========================================================================
+// CUBE ROTATION & ENGINE LOGIC
+// ==========================================================================
+let currentDay = 1;
+let isAnimating = false;
+
+// Format numbers
+function formatNumber(num) { return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
+// Viewer Simulator
+let currentViewers = 1025;
+setInterval(() => {
+    if(currentViewers < 11000) {
+        currentViewers += Math.floor(Math.random() * 5) + 1;
+        if(currentViewers > 11000) currentViewers = 11000;
+        document.getElementById('total-aspirants').innerText = formatNumber(currentViewers);
+    }
+}, 4500);
+
+// Widget Counsellor Simulator
+setInterval(() => {
+    const counter = document.getElementById('counsellor-count');
+    let val = parseInt(counter.innerText) + (Math.random() > 0.5 ? 1 : -1);
+    if(val > 9) val = 8; if(val < 2) val = 3;
+    counter.classList.remove('bouncing');
+    void counter.offsetWidth;
+    counter.classList.add('bouncing');
+    counter.innerText = val;
+}, 3500);
+
+// Setup Dynamic Cube Dimensions
+function updateCubeDimensions() {
+    const scene = document.getElementById('cube-viewport');
+    const width = scene.offsetWidth - 48;
+    document.documentElement.style.setProperty('--cw-half', (width / 2) + 'px');
+}
+window.addEventListener('resize', () => {
+    updateCubeDimensions();
+    forceHeightSync(document.getElementById('face-current'));
+});
+
+// Map Generator
+function initMap() {
+    const grid = document.getElementById('route-grid');
+    for(let i = 1; i <= 20; i++) {
+        let node = document.createElement('div');
+        node.className = `matrix-node ${i === 1 ? 'active' : ''}`;
+        node.innerText = String(i).padStart(2, '0');
+        node.onclick = () => selectDay(i);
+        grid.appendChild(node);
+    }
+}
+
+// HTML Generator for Schedule
+function getScheduleHTML(dayData) {
+    let slots = dayData.slots.map(s => `
+        <div class="timeline-segment">
+            <div class="time-col">${s.time}</div>
+            <div class="content-col">${s.focus.replace(/([^:]+):/, "<strong>$1:</strong>")}</div>
+        </div>
+    `).join('');
+    return `
+        <h2 class="face-header">Day ${dayData.day}<br><span style="font-size:16px; font-family:'Helvetica Neue', sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:1px; color:#FF2A5F;">${dayData.title}</span></h2>
+        ${slots}
+    `;
+}
+
+// Sync viewport height to active face
+function forceHeightSync(activeFaceElement) {
+    const viewport = document.getElementById('cube-viewport');
+    viewport.style.height = (activeFaceElement.offsetHeight + 40) + 'px'; 
+}
+
+// Core Rotation Trigger
+function selectDay(targetDay) {
+    if (targetDay === currentDay || isAnimating) return;
+    isAnimating = true;
+    updateCubeDimensions();
+
+    const isNext = targetDay > currentDay;
+    const currentFace = document.getElementById('face-current');
+    const stagingFace = document.getElementById('face-staging');
+    const assembly = document.getElementById('cube-assembly');
+    
+    // Update Map UI
+    document.querySelectorAll('.matrix-node').forEach((node, idx) => {
+        node.className = 'matrix-node';
+        if (idx + 1 < targetDay) node.classList.add('completed');
+        if (idx + 1 === targetDay) node.classList.add('active');
+    });
+
+    // Populate staging face
+    stagingFace.innerHTML = getScheduleHTML(routineData[targetDay - 1]);
+    
+    // Position staging face correctly based on direction
+    if (isNext) {
+        stagingFace.className = 'cube-face face-right active';
+    } else {
+        stagingFace.className = 'cube-face face-left active';
+    }
+
+    // Sync height to accommodate the taller of the two faces during transition
+    const viewport = document.getElementById('cube-viewport');
+    viewport.style.height = (Math.max(currentFace.offsetHeight, stagingFace.offsetHeight) + 40) + 'px';
+
+    // Trigger Rotation
+    setTimeout(() => {
+        if (isNext) {
+            assembly.style.transform = 'translateZ(calc(var(--cw-half, 200px) * -1)) rotateY(-90deg)';
+        } else {
+            assembly.style.transform = 'translateZ(calc(var(--cw-half, 200px) * -1)) rotateY(90deg)';
+        }
+        
+        // Wait for animation to finish
+        setTimeout(() => {
+            // Hot swap content
+            currentFace.innerHTML = stagingFace.innerHTML;
+            
+            // Reset assembly instantly without transition
+            assembly.style.transition = 'none';
+            assembly.style.transform = 'translateZ(calc(var(--cw-half, 200px) * -1)) rotateY(0deg)';
+            
+            // Hide staging
+            stagingFace.classList.remove('active');
+            
+            // Force precise height for new content
+            forceHeightSync(currentFace);
+
+            // Reflow and restore transition
+            void assembly.offsetWidth;
+            assembly.style.transition = 'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
+            
+            currentDay = targetDay;
+            isAnimating = false;
+        }, 800);
+    }, 50);
+}
+
+// Dialer Widget Trigger
+function executeDialerAction(el, num) {
+    if(el.classList.contains('copied')) return;
+    el.classList.add('copied');
+    setTimeout(() => { window.location.href = 'tel:' + num; }, 600);
+    setTimeout(() => { el.classList.remove('copied'); }, 3000);
+}
+
+// Initialize
+window.onload = () => {
+    initMap();
+    const initFace = document.getElementById('face-current');
+    initFace.innerHTML = getScheduleHTML(routineData[0]);
+    updateCubeDimensions();
+    
+    setTimeout(() => { forceHeightSync(initFace); }, 100);
+};
+</script>
+
+

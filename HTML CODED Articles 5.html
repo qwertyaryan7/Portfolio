@@ -1,0 +1,1012 @@
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>GMCH Chandigarh Medical Officer Recruitment 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #781719;
+            --cream: #F5EEE5;
+            --charcoal: #191919;
+            --beige: #D7C7B7;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            background-color: #EFE9E0; /* Slightly darker than cream for contrast */
+            font-family: 'Poppins', sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .main-wrapper {
+            max-width: 580px;
+            margin: 0 auto;
+            background-color: var(--cream);
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-left: 1px solid var(--beige);
+            border-right: 1px solid var(--beige);
+            min-height: 100vh;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--burgundy);
+            letter-spacing: -0.3px;
+            overflow-wrap: anywhere;
+            word-wrap: break-word;
+        }
+
+        .heading-sub {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(25, 25, 25, 0.6);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Banner */
+        .banner-container {
+            width: 100%;
+            position: relative;
+            background: var(--white);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 24px 20px 16px 20px;
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+            border-bottom: 1px solid var(--beige);
+        }
+
+        .main-title {
+            font-size: 1.6rem;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .view-counter {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(120, 23, 25, 0.05);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--burgundy);
+            border: 1px solid rgba(120, 23, 25, 0.1);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--burgundy);
+            border-radius: 50%;
+            margin-right: 8px;
+            position: relative;
+        }
+
+        .pulse-dot::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--burgundy);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.5); opacity: 0.6; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        /* Content Sections */
+        .section-container {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--beige);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 20px;
+            background: var(--burgundy);
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: rgba(25, 25, 25, 0.85);
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 16px 0;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--beige);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            min-width: 0;
+        }
+
+        .info-val {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--charcoal);
+            overflow-wrap: break-word;
+        }
+
+        /* Detail List Cards */
+        .list-card {
+            background: var(--white);
+            border: 1px solid var(--beige);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .list-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--beige);
+            transition: background 0.3s;
+        }
+
+        .list-card:hover::before {
+            background: var(--burgundy);
+        }
+
+        .list-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(120, 23, 25, 0.08);
+            color: var(--burgundy);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            margin-top: 16px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: var(--beige);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -20px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--burgundy);
+            z-index: 2;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--burgundy);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            border: 1px solid var(--beige);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        /* Accordion */
+        .accordion-item {
+            background: var(--white);
+            border: 1px solid var(--beige);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            background: var(--white);
+            transition: background 0.2s;
+        }
+
+        .accordion-header:active {
+            background: var(--cream);
+        }
+
+        .accordion-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding-right: 12px;
+            line-height: 1.4;
+        }
+
+        .accordion-icon {
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid var(--burgundy);
+            border-bottom: 2px solid var(--burgundy);
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(-135deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+            background: rgba(245, 238, 229, 0.3);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        .accordion-inner {
+            padding: 0 16px 16px 16px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(215, 199, 183, 0.3);
+            margin-top: 8px;
+            padding-top: 12px;
+        }
+
+        .accordion-inner ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .accordion-inner li {
+            margin-bottom: 6px;
+        }
+
+        /* Salary Cards */
+        .salary-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--white);
+            border: 1px solid var(--beige);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .salary-amount {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--burgundy);
+            font-weight: 800;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--beige);
+        }
+
+        .salary-sub {
+            font-size: 0.8rem;
+            color: rgba(25, 25, 25, 0.7);
+            font-weight: 500;
+        }
+
+        /* Checklist */
+        .check-list {
+            list-style: none;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            background: var(--white);
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid var(--beige);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--burgundy);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-icon::after {
+            content: '✓';
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background: var(--burgundy);
+            color: var(--white);
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(120, 23, 25, 0.2);
+            transition: transform 0.1s, box-shadow 0.1s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(120, 23, 25, 0.2);
+        }
+
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            background: transparent;
+            color: var(--burgundy);
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            border: 2px solid var(--burgundy);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.1s, background 0.1s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.98);
+            background: rgba(120, 23, 25, 0.05);
+        }
+
+        /* Liquid Prism Monolith Contact Widget */
+        .monolith-wrapper {
+            position: relative;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            padding: 3px;
+            overflow: hidden;
+            cursor: pointer;
+            perspective: 1000px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .monolith-border {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: conic-gradient(from 0deg, transparent, var(--burgundy), transparent, var(--beige), transparent);
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        .monolith-flipper {
+            position: relative;
+            width: 100%;
+            height: 90px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .monolith-wrapper.flipped .monolith-flipper {
+            transform: rotateX(180deg);
+        }
+
+        .monolith-face {
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: rgba(245, 238, 229, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
+        }
+
+        .monolith-back {
+            transform: rotateX(180deg);
+            background: var(--burgundy);
+            color: var(--white);
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .monolith-back-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .monolith-back-sub {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .monolith-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .monolith-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--burgundy);
+            margin-bottom: 2px;
+        }
+
+        .monolith-phone {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg, var(--charcoal) 0%, rgba(25,25,25,0.4) 50%, var(--charcoal) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .monolith-status {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #2e7d32;
+            text-transform: uppercase;
+            background: rgba(46, 125, 50, 0.1);
+            padding: 4px 8px;
+            border-radius: 12px;
+            margin-bottom: 4px;
+        }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: #2e7d32;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .counselor-count {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(25, 25, 25, 0.6);
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 24px 20px;
+            background: var(--white);
+            border-top: 1px solid var(--beige);
+        }
+
+        .product-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--cream);
+            border: 1px solid var(--beige);
+            border-radius: 12px;
+            padding: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:active {
+            transform: scale(0.98);
+        }
+
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: var(--white);
+            flex-shrink: 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .product-details {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .product-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .product-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.3;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-btn {
+            display: inline-block;
+            background: var(--charcoal);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+    </style>
+
+
+
+    <main class="main-wrapper">
+        
+        <!-- Hero Banner -->
+        <div class="banner-container">
+            <img src="https://www.adda247.com/jobs/wp-content/uploads/2026/10/28135350/GMCH-Chandigarh-Recruitment-2026.png" alt="GMCH Chandigarh Recruitment 2026 Banner">
+        </div>
+
+        <!-- Header -->
+        <header class="header-section">
+            <span class="heading-sub">Official Notification</span>
+            <h1 class="main-title">GMCH Chandigarh Medical Officer Recruitment 2026</h1>
+            
+            <div class="view-counter">
+                <span class="pulse-dot"></span>
+                Total Aspirants Viewed:&nbsp;<strong id="aspirant-count">1,025</strong>
+            </div>
+
+            <p style="margin-top: 16px;">The Government Medical College &amp; Hospital (GMCH), Chandigarh, is inviting online applications for 242 tenure-based medical vacancies. <strong>The application deadline is October 28, 2026, by 04:00 PM.</strong></p>
+        </header>
+
+        <!-- Vacancy Breakdown -->
+        <section class="section-container">
+            <h2 class="section-title">Vacancy Breakdown</h2>
+            <p>There are a total of 242 vacant posts available across various categories.</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-val">174</div>
+                    <div class="info-label">General</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-val">18</div>
+                    <div class="info-label">SC</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-val">44</div>
+                    <div class="info-label">OBC</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-val">06</div>
+                    <div class="info-label">EWS</div>
+                </div>
+            </div>
+
+            <div class="list-card">
+                <span class="badge">Max 3 Years Tenure</span>
+                <h3>Senior Residents, Resident Anaesthetists, Resident Pathologists, and CMOs (General Medicine &amp; Surgery)</h3>
+            </div>
+            
+            <div class="list-card">
+                <span class="badge">Max 3 Years Tenure</span>
+                <h3>Demonstrators, Medical Officers (GMCH &amp; MHI), Lady Medical Officers, and Emergency Medical Officers</h3>
+            </div>
+
+            <div class="list-card">
+                <span class="badge">Max 1 Year Tenure</span>
+                <h3>Junior Residents (MBBS &amp; BDS)</h3>
+                <p style="font-size: 0.8rem; margin: 0; color: #555;">Commencing on January 1, 2027.</p>
+            </div>
+        </section>
+
+        <!-- Important Dates -->
+        <section class="section-container">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">October 28, 2026 | 4:00 PM</div>
+                    <div class="timeline-content">Application Deadline</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">November 3, 2026 | 11:00 AM - 12:00 Noon</div>
+                    <div class="timeline-content">Written Test (Postgraduate Posts)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">November 4, 2026 | 11:00 AM</div>
+                    <div class="timeline-content">Written Test (MBBS &amp; BDS Posts)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">November 10, 2026</div>
+                    <div class="timeline-content">Result Declaration</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">To Be Intimated</div>
+                    <div class="timeline-content">Interview dates for shortlisted candidates</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Eligibility & Age Limits -->
+        <section class="section-container">
+            <h2 class="section-title">Eligibility &amp; Age Limits</h2>
+            <p style="font-size: 0.85rem; background: rgba(25,25,25,0.05); padding: 10px; border-radius: 8px;">Age limits are calculated as of <strong>October 28, 2026</strong>. Standard age relaxations apply: 5 years for SC candidates and 3 years for OBC candidates.</p>
+
+            <div class="accordion-item" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <div class="accordion-title">Senior Residents, Anaesthetists, Pathologists &amp; CMOs</div>
+                    <div class="accordion-icon"></div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p><strong>Qualification:</strong> Must hold a recognized Postgraduate Medical Degree (M.D./M.S./DNB/M.Ch./D.M) or equivalent.</p>
+                        <p><strong>Upper Age Limit:</strong> 45 years.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <div class="accordion-title">Demonstrators, MOs, EMOs, &amp; LMOs</div>
+                    <div class="accordion-icon"></div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p><strong>Qualification:</strong> Must hold an MBBS degree. Preference is given to PG degree holders. M.Sc. (Medical) candidates may be considered for certain Demonstrator specialties if medical candidates are unavailable.</p>
+                        <p><strong>Upper Age Limit:</strong> 37 years.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <div class="accordion-title">Junior Residents (MBBS &amp; BDS)</div>
+                    <div class="accordion-icon"></div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p><strong>Qualification:</strong> Must hold an MBBS/BDS degree, be registered with the State Medical Council or MCI, and complete a one-year rotatory internship by December 31, 2026.</p>
+                        <p><strong>Upper Age Limit:</strong> 30 years.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Salary & Pay Scale -->
+        <section class="section-container">
+            <h2 class="section-title">Salary &amp; Pay Scale</h2>
+            
+            <div class="salary-card">
+                <h3>Senior Residents, Resident Anaesthetists, Resident Pathologists &amp; CMOs</h3>
+                <div class="salary-amount">₹67,700</div>
+                <div class="salary-sub">Minimum pay 1st Cell of Level-11 + 20% NPA</div>
+            </div>
+
+            <div class="salary-card">
+                <h3>MOs, EMOs, LMOs, &amp; Junior Residents</h3>
+                <div class="salary-amount">₹56,100</div>
+                <div class="salary-sub">Minimum pay 1st Cell of Level-10 + Admissible allowances</div>
+            </div>
+
+            <div class="salary-card">
+                <h3>Demonstrators</h3>
+                <div class="salary-amount">₹53,100</div>
+                <div class="salary-sub">Minimum pay 1st Cell of Level-9 + Admissible allowances</div>
+            </div>
+        </section>
+
+        <!-- Application Fee & Process -->
+        <section class="section-container">
+            <h2 class="section-title">Application Fee &amp; Process</h2>
+            <p>Applications and document uploads must be submitted exclusively online through the GMCH website (www.gmch.gov.in) under the 'VACANCIES' section.</p>
+            
+            <ul class="check-list">
+                <li class="check-item">
+                    <div class="check-icon"></div>
+                    <div><strong>All Other Categories:</strong> ₹500 plus any applicable bank charges.</div>
+                </li>
+                <li class="check-item">
+                    <div class="check-icon"></div>
+                    <div><strong>SC Candidates:</strong> ₹250 plus any applicable bank charges.</div>
+                </li>
+                <li class="check-item">
+                    <div class="check-icon"></div>
+                    <div><strong>Exemptions:</strong> Persons with Disability (PwD) candidates and candidates sponsored by the Regional Employment Exchange (REE) are exempted.</div>
+                </li>
+            </ul>
+
+            <div style="background: rgba(120, 23, 25, 0.05); border-left: 3px solid var(--burgundy); padding: 12px; margin-top: 16px; font-size: 0.85rem; border-radius: 0 8px 8px 0;">
+                <strong>Note:</strong> Candidates holding postgraduate qualifications who apply for multiple eligible departments only need to pay the requisite application fee once and will appear for a single related test.
+            </div>
+
+            <div class="action-buttons">
+                <a href="https://gmch.gov.in/online-applications-are-invited-from-lndian-nationals-for-filling-up-the-vacant-posts-of-seaior" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    Apply Online Now
+                </a>
+                <a href="https://www.adda247.com/jobs/wp-content/uploads/2026/10/28135353/GMCH-Chandigarh-Recruitment-2026-Notification.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    View Official Notification PDF
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Widget -->
+        <section class="section-container" style="border-bottom: none;">
+            <div class="monolith-wrapper" id="contactWidget">
+                <div class="monolith-border"></div>
+                <div class="monolith-flipper">
+                    <!-- Front Face -->
+                    <div class="monolith-face monolith-front">
+                        <div class="monolith-info">
+                            <span class="monolith-title">Contact Counsellor</span>
+                            <span class="monolith-phone">09240231061</span>
+                        </div>
+                        <div class="monolith-status">
+                            <div class="live-indicator">
+                                <span class="live-dot"></span> Live
+                            </div>
+                            <span class="counselor-count">Available: <span id="counselorNum">4</span></span>
+                        </div>
+                    </div>
+                    <!-- Back Face -->
+                    <div class="monolith-face monolith-back">
+                        <div class="monolith-back-title">Opening Dialer...</div>
+                        <div class="monolith-back-sub">Number copied to clipboard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <span class="heading-sub">Recommended Resource</span>
+            <a href="https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=19682734035___c_&amp;utm_term=&amp;utm_content=&amp;gclid=CjwKCAjwuobXBhBXEiwAYUaIlagvwijHrsWNCaOhjapsLR390HpK7OwGivqBpEKrnyQN8yp7pd0GYRoC0GoQAvD_BwE&amp;productId=90881" target="_blank" rel="noopener noreferrer" class="product-card">
+                <img src="https://st.adda247.com/https://storeimages.adda247.com/883721788416574.png?tr=w-800,q-80,c-at_max" alt="Nursing Mahapack" class="product-image">
+                <div class="product-details">
+                    <div class="product-label">Online Live Classes</div>
+                    <div class="product-title">Nursing Mahapack</div>
+                    <div class="product-btn">View Course</div>
+                </div>
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(element) {
+            element.classList.toggle('active');
+        }
+
+        // Aspirant Counter Logic (1025 to max 11000)
+        let currentAspirants = 1025;
+        const maxAspirants = 11000;
+        const aspirantEl = document.getElementById('aspirant-count');
+
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        setInterval(() => {
+            if (currentAspirants < maxAspirants) {
+                // Increment randomly between 1 and 4
+                let increment = Math.floor(Math.random() * 4) + 1;
+                currentAspirants = Math.min(currentAspirants + increment, maxAspirants);
+                aspirantEl.textContent = formatNumber(currentAspirants);
+            }
+        }, 4500);
+
+        // Counselor Count Logic (1-10 updating every ~3.5s)
+        const counselorNumEl = document.getElementById('counselorNum');
+        setInterval(() => {
+            const randomCount = Math.floor(Math.random() * 10) + 1;
+            counselorNumEl.textContent = randomCount;
+        }, 3500);
+
+        // Contact Widget Action Logic
+        const contactWidget = document.getElementById('contactWidget');
+        const phoneNumber = '09240231061';
+        let isFlipping = false;
+
+        contactWidget.addEventListener('click', () => {
+            if (isFlipping) return;
+            isFlipping = true;
+
+            // Attempt clipboard copy
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phoneNumber).catch(err => console.log('Clipboard copy restricted:', err));
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = phoneNumber;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try { document.execCommand('copy'); } catch (err) {}
+                textArea.remove();
+            }
+
+            // Flip Animation
+            contactWidget.classList.add('flipped');
+
+            // Trigger Dialer & Revert
+            setTimeout(() => {
+                window.location.href = `tel:${phoneNumber}`;
+                setTimeout(() => {
+                    contactWidget.classList.remove('flipped');
+                    isFlipping = false;
+                }, 1000);
+            }, 2000);
+        });
+    </script>
+

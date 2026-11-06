@@ -1,0 +1,309 @@
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nursing Mahapack - Big Selection Days</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              teal: '#0D9488',
+              darkTeal: '#0F766E',
+              lightTeal: '#F0FDFA',
+              red: '#E11D48',
+              darkRed: '#BE123C',
+              gold: '#F59E0B',
+              bg: '#F8FAFC'
+            }
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'glass-heavy': '0 12px 40px 0 rgba(31, 38, 135, 0.12)',
+            'neon-red': '0 0 20px rgba(225, 29, 72, 0.4)',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #F8FAFC;
+      background-image: radial-gradient(at 0% 0%, hsla(173, 100%, 76%, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 100% 0%, hsla(343, 100%, 76%, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+    
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .card-3d {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card-3d:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.2);
+    }
+  </style>
+
+
+
+  <main class="w-full max-w-6xl mx-auto space-y-8">
+
+    <!-- Live Sale Sticky Pill -->
+    <header class="sticky top-4 z-50 mx-auto max-w-3xl glassmorphism rounded-full px-5 py-3 shadow-glass flex flex-wrap items-center justify-between gap-4 border-slate-200/60">
+      <div class="flex items-center gap-3">
+        <span class="relative flex h-3.5 w-3.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-red"></span>
+        </span>
+        <span class="text-sm font-black tracking-widest text-slate-900 uppercase">Live Sale</span>
+        <span class="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+        <span class="hidden md:block text-xs font-semibold text-slate-500 uppercase tracking-wide">Big Selection Days</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-sm font-black text-brand-darkRed">
+        <span class="text-[10px] uppercase tracking-widest text-slate-500 mr-2">Ends In</span>
+        <span id="hours" class="bg-red-100 px-2 py-1 rounded-md min-w-[32px] text-center">08</span>:
+        <span id="minutes" class="bg-red-100 px-2 py-1 rounded-md min-w-[32px] text-center">42</span>:
+        <span id="seconds" class="bg-red-100 px-2 py-1 rounded-md min-w-[32px] text-center">19</span>
+      </div>
+    </header>
+
+    <!-- Master Container -->
+    <section class="w-full glassmorphism rounded-[2rem] shadow-glass-heavy overflow-hidden relative border border-white">
+      
+      <!-- Hero Section (Dark Medical Theme) -->
+      <div class="relative bg-gradient-to-br from-slate-900 via-brand-darkTeal to-brand-teal px-6 py-12 sm:py-16 text-center overflow-hidden">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-lightTeal/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-lightTeal text-xs sm:text-sm font-bold tracking-widest uppercase mb-4">
+            Campaign Exclusive
+          </span>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight drop-shadow-md">
+            Big Selection Days
+          </h1>
+          <p class="mt-4 text-2xl sm:text-4xl font-extrabold text-brand-gold tracking-wide drop-shadow-sm">
+            Ek Mahapack. Fayde chaar.
+          </p>
+          <p class="mt-4 text-slate-200 text-sm sm:text-base max-w-2xl mx-auto font-medium">
+            The ultimate preparation solution for NORCET, RRB, SGPGI, CHO, and all major nursing recruitment examinations across India.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-8 lg:p-10 space-y-10">
+
+        <!-- 1. Featured Campaign Banner -->
+        <a href="https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?srsltid=AYCX9vL9r4Gx_ND9rXcR4nkmN38Fv6A6O3T_QY-p8mSLUdfShsXLjpO8&amp;productId=90881" target="_blank" rel="noopener noreferrer" class="block w-full overflow-hidden rounded-2xl shadow-lg border border-slate-200 card-3d relative group bg-white">
+          <img src="https://www.adda247.com/jobs/wp-content/uploads/2026/11/01221353/1200x628-10.png" alt="Nursing Mahapack Banner" width="1200" height="628" class="w-full h-auto object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <span class="text-white font-bold bg-brand-red px-4 py-2 rounded-lg text-sm uppercase tracking-wide">View Live Offer</span>
+          </div>
+        </a>
+
+        <!-- 2. The 4 Advantages Grid (Gen-Z 2.5D Tickets) -->
+        <div class="space-y-4">
+          <div class="text-center">
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900">The 4 Exclusive Advantages</h2>
+            <p class="text-slate-500 text-sm mt-1 font-semibold uppercase tracking-wider">Stacked benefits included directly inside</p>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Advantage 1 -->
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-6 text-center card-3d flex flex-col justify-center">
+              <span class="text-xs font-black tracking-widest text-red-600 uppercase mb-2">Advantage 1</span>
+              <div class="text-5xl font-black text-slate-900">79%</div>
+              <div class="text-xl font-black text-brand-red uppercase tracking-wider">OFF</div>
+              <p class="text-xs font-bold text-slate-600 mt-3">Direct Checkout Savings</p>
+            </div>
+            
+            <!-- Advantage 2 -->
+            <div class="bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 rounded-2xl p-6 text-center card-3d flex flex-col justify-center">
+              <span class="text-xs font-black tracking-widest text-teal-700 uppercase mb-2">Advantage 2</span>
+              <div class="text-5xl font-black text-slate-900">3X</div>
+              <div class="text-xl font-black text-brand-teal uppercase tracking-wider">Validity</div>
+              <p class="text-xs font-bold text-slate-600 mt-3">Extended Study Duration</p>
+            </div>
+
+            <!-- Advantage 3 -->
+            <div class="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-2xl p-6 text-center card-3d flex flex-col justify-center">
+              <span class="text-xs font-black tracking-widest text-amber-700 uppercase mb-2">Advantage 3</span>
+              <div class="text-5xl font-black text-slate-900">+3</div>
+              <div class="text-xl font-black text-brand-gold uppercase tracking-wider">Months</div>
+              <p class="text-xs font-bold text-slate-600 mt-3">Bonus Time Added</p>
+            </div>
+
+            <!-- Advantage 4 -->
+            <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 rounded-2xl p-6 text-center card-3d flex flex-col justify-center">
+              <span class="text-xs font-black tracking-widest text-indigo-600 uppercase mb-2">Advantage 4</span>
+              <div class="text-5xl font-black text-slate-900">FREE</div>
+              <div class="text-xl font-black text-indigo-600 uppercase tracking-wider">AI Course</div>
+              <p class="text-xs font-bold text-slate-600 mt-3">Next-Gen Skill Curriculum</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Resource Metrics (Clean Data Representation) -->
+        <div class="glassmorphism rounded-2xl p-6 border border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-3xl font-black text-brand-teal">10,000+</div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mt-1">Live Class Hours</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black text-brand-teal">841</div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mt-1">Mock Tests</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black text-brand-teal">10,066</div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mt-1">Video Lectures</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black text-brand-teal">30</div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wide mt-1">E-Books Included</div>
+          </div>
+        </div>
+
+        <!-- 4. Core Product Conversion Box -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-brand-teal shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-gold text-slate-900 font-black text-[10px] sm:text-xs px-4 py-1.5 rounded-bl-xl uppercase tracking-widest">
+            Coupon: 4XDEAL Applied
+          </div>
+          
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <a href="https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?srsltid=AYCX9vL9r4Gx_ND9rXcR4nkmN38Fv6A6O3T_QY-p8mSLUdfShsXLjpO8&amp;productId=90881" target="_blank" rel="noopener noreferrer" class="shrink-0 relative group">
+              <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-4 border-slate-100 shadow-md">
+                <img src="https://st.adda247.com/https://storeimages.adda247.com/883721788416574.png?tr=w-800,q-80,c-at_max" alt="Nursing Mahapack Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              </div>
+            </a>
+            
+            <div class="flex-1 text-center md:text-left">
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+                Nursing Mahapack
+              </h3>
+              <p class="text-sm font-semibold text-brand-teal uppercase tracking-wide mt-1">
+                RRB, NORCET, SGPGI, BTSC, KGMU &amp; More
+              </p>
+              
+              <div class="mt-4 flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                <div>
+                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">15 Months Access</p>
+                  <div class="flex items-end gap-2 justify-center md:justify-start">
+                    <span class="text-3xl font-black text-brand-red">₹2,862</span>
+                    <span class="text-sm font-semibold text-slate-400 line-through mb-1">₹13,632</span>
+                  </div>
+                </div>
+                <div class="hidden md:block w-px h-10 bg-slate-200"></div>
+                <div>
+                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">21 Months Access</p>
+                  <div class="flex items-end gap-2 justify-center md:justify-start">
+                    <span class="text-3xl font-black text-slate-900">₹3,817</span>
+                    <span class="text-sm font-semibold text-slate-400 line-through mb-1">₹18,178</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <a href="https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?srsltid=AYCX9vL9r4Gx_ND9rXcR4nkmN38Fv6A6O3T_QY-p8mSLUdfShsXLjpO8&amp;productId=90881" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full md:w-auto bg-brand-red text-white px-8 py-4 rounded-xl font-black text-base uppercase tracking-widest shadow-neon-red hover:bg-brand-darkRed transition-colors duration-300">
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Content Structure (Plain Text formatting per spec) -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+          <h4 class="text-xl font-black text-slate-900 uppercase tracking-wide border-b border-slate-100 pb-3 mb-4">
+            Course Overview
+          </h4>
+          <p class="text-slate-700 text-sm leading-relaxed mb-4">
+            The Nursing Mahapack is the ultimate comprehensive course designed to help you prepare for all major nursing exams throughout the year. With the number of vacancies increasing every year in Nursing, it becomes essential to have complete study material that will help you excel in these examinations. This package is designed to cover all exams throughout the year, featuring live classes, a video course, and test series. It is a cost-efficient, one-stop solution where all future foundational and target batches will be added automatically.
+          </p>
+          <p class="text-slate-700 text-sm leading-relaxed mb-6 font-medium">
+            नर्सिंग महापैक एक संपूर्ण कोर्स है जिसे पूरे वर्ष के दौरान सभी प्रमुख नर्सिंग परीक्षाओं की तैयारी में आपकी मदद करने के लिए डिज़ाइन किया गया है। नर्सिंग में हर साल पदों की संख्या बढ़ने के साथ, यह अत्यंत आवश्यक है कि आपके पास पूर्ण अध्ययन सामग्री हो। यह एक किफायती संपूर्ण समाधान है क्योंकि सभी बैचेस इसी एक कोर्स में शामिल होंगे।
+          </p>
+
+          <h4 class="text-lg font-black text-slate-900 uppercase tracking-wide mb-3">
+            Primary Target Exams
+          </h4>
+          <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-semibold text-brand-darkTeal mb-6">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> NORCET</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> RRB Nursing Superintendent</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> RRB Pharmacist</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> Rajasthan CHO</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> Bihar CHO</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> AIIMS CRE</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span> JIPMER &amp; SGPGI</li>
+          </ul>
+
+          <h4 class="text-lg font-black text-slate-900 uppercase tracking-wide mb-3">
+            Package Inclusions
+          </h4>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li><span class="font-bold text-slate-900">Live &amp; Recorded Classes:</span> Flexibility to revisit 10,000+ hours of lectures at your convenience.</li>
+            <li><span class="font-bold text-slate-900">Foundation &amp; Target Batches:</span> Dive deep into subjects and hit the bullseye with specific exam batches.</li>
+            <li><span class="font-bold text-slate-900">Comprehensive Mock Tests:</span> Track your progress with 841 mock tests and in-depth discussion sessions.</li>
+            <li><span class="font-bold text-slate-900">Study Material:</span> Convenient access to 30 E-Books, handwritten notes, and class PDFs.</li>
+            <li><span class="font-bold text-slate-900">Score Booster Modules:</span> Elevate performance with sessions strictly aimed at maximizing exam scores.</li>
+          </ul>
+        </div>
+
+        <!-- 6. Bottom Assurance Banner -->
+        <footer class="w-full bg-slate-900 rounded-2xl py-5 px-6 text-center border border-slate-700 shadow-xl relative overflow-hidden flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-brand-gold text-slate-900 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 font-bold" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="text-base sm:text-lg font-black tracking-widest text-brand-gold uppercase">
+              100% Refund On Selection
+            </div>
+            <div class="text-xs text-slate-300 font-medium mt-0.5">
+              Complete fee reimbursed upon final qualification as per program terms.
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    (function initTimer() {
+      var totalSeconds = (8 * 3600) + (42 * 60) + 19;
+      var hoursEl = document.getElementById('hours');
+      var minutesEl = document.getElementById('minutes');
+      var secondsEl = document.getElementById('seconds');
+
+      function updateClock() {
+        if (totalSeconds <= 0) totalSeconds = 24 * 3600;
+        totalSeconds--;
+        var h = Math.floor(totalSeconds / 3600);
+        var m = Math.floor((totalSeconds % 3600) / 60);
+        var s = Math.floor(totalSeconds % 60);
+
+        if (hoursEl) hoursEl.textContent = (h < 10 ? '0' : '') + h;
+        if (minutesEl) minutesEl.textContent = (m < 10 ? '0' : '') + m;
+        if (secondsEl) secondsEl.textContent = (s < 10 ? '0' : '') + s;
+      }
+      setInterval(updateClock, 1000);
+    })();
+  </script>
+

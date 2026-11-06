@@ -1,0 +1,693 @@
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Navratri Day 9: Maa Siddhidatri &amp; The Women Who Lead India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@400;500;600;800&amp;family=Noto+Serif+Devanagari:wght@600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0310; --bg2:#160724; --card:#220c36; --line:rgba(212,175,55,0.2);
+  --text:#f5f0fa; --muted:#c1b3d1;
+  --gold:#D4AF37; --light-gold:#F9F1D8; --purple:#9B5DE5; --pink:#e879f9; --teal:#2dd4bf;
+  --grad:linear-gradient(120deg, #D4AF37, #9B5DE5 55%, #e879f9);
+  --sanskrit:'Noto Serif Devanagari',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+a{color:inherit}
+button{font:inherit;cursor:pointer;background:none;border:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:40px 0;position:relative}
+.eyebrow{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:8px}
+h2{font-size:clamp(1.5rem,3.6vw,2.2rem);margin-bottom:12px;color:#fff}
+h2 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:650px;margin-bottom:20px;font-size:.96rem}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--grad);z-index:100;transition:width 0.1s}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:90;background:rgba(10,3,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;gap:8px}
+.nav-title{font-family:'Playfair Display',serif;font-weight:800;letter-spacing:1px;font-size:1rem;color:var(--gold)}
+.nav-actions{display:flex;gap:8px}
+.action-btn{display:flex;align-items:center;gap:6px;color:var(--muted);font-family:'Inter';font-weight:600;font-size:0.8rem;padding:6px 12px;border-radius:99px;border:1px solid rgba(212,175,55,0.4);transition:.25s}
+.action-btn[aria-pressed="true"], .action-btn:hover{color:#fff;border-color:var(--gold);background:rgba(212,175,55,.15)}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.action-btn[aria-pressed="true"] .status-dot{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+
+/* Hero Banner & Layout */
+.hero{position:relative;padding:0 0 40px;text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 100%,rgba(155,93,229,.2),transparent 60%),var(--bg)}
+.hero-banner-wrapper {position:relative;width:100%;}
+.hero-banner-wrapper::after {content:"";position:absolute;inset:0;background:linear-gradient(to bottom, transparent 50%, var(--bg) 98%);pointer-events:none;}
+.hero-banner{width:100%;height:auto;max-height:60vh;object-fit:cover;object-position:center top;display:block;}
+
+/* Floral Mandala Background */
+.mandala{position:absolute;left:50%;top:75%;width:min(900px,150vw);aspect-ratio:1;transform:translate(-50%,-50%);opacity:.12;pointer-events:none;z-index:0}
+.spin-slow, .spin-reverse, .spin-fast { transform-origin: 300px 300px; }
+.spin-slow{animation:spin 90s linear infinite}
+.spin-reverse{animation:spin 60s linear infinite reverse}
+.spin-fast{animation:spin 40s linear infinite}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+.hero .wrap{position:relative;z-index:2;margin-top:-60px}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--gold);color:var(--gold);padding:6px 16px;border-radius:99px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.5)}
+h1{font-size:clamp(2rem,6.5vw,3.6rem);font-weight:900;letter-spacing:-.01em;margin-bottom:12px;line-height:1.1;text-shadow:0 10px 30px rgba(0,0,0,0.8)}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.d{color:var(--muted);max-width:600px;margin:0 auto;font-size:1.05rem;text-shadow:0 4px 10px rgba(0,0,0,0.8)}
+
+/* Content Grid */
+.content-grid{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:768px){.content-grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* Mantra Card */
+.mantra-card{text-align:center;padding:30px 20px;background:linear-gradient(160deg,#1c0c24,#2a0b2f);border:1px solid rgba(212,175,55,.4);border-radius:20px;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.mantra-card::before,.mantra-card::after{content:"ॐ";position:absolute;font-family:var(--sanskrit);font-size:5rem;color:rgba(212,175,55,.06);top:50%;transform:translateY(-50%)}
+.mantra-card::before{left:14px}
+.mantra-card::after{right:14px}
+.mantra-sa{font-family:var(--sanskrit);font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.5;letter-spacing:.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;margin-bottom:10px;padding:10px 0}
+.mantra-en{font-size:.9rem;color:#d9cfe9;font-style:italic;margin-bottom:16px}
+.mantra-detail{background:rgba(0,0,0,0.3);padding:12px;border-radius:8px;font-size:.85rem;color:var(--muted);border-left:3px solid var(--gold)}
+
+/* Elegant Table */
+.elegant-table{width:100%;border-collapse:collapse;margin-top:24px;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.elegant-table th{background:rgba(0,0,0,0.4);color:var(--gold);font-family:'Playfair Display',serif;text-transform:uppercase;letter-spacing:1px;padding:16px;text-align:left;font-size:.9rem;border-bottom:1px solid var(--line)}
+.elegant-table td{padding:16px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:.95rem;color:#e2d8f1}
+.elegant-table tr:last-child td{border-bottom:none}
+.elegant-table td:first-child{font-weight:600;color:var(--gold);width:35%}
+
+/* Timeline / Carousel */
+.timeline-filter{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filter-btn{background:var(--card);color:var(--muted);border:1px solid var(--line);padding:8px 16px;border-radius:99px;font:600 .84rem 'Inter';transition:.25s}
+.filter-btn[aria-pressed="true"], .filter-btn:hover{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 20px -8px var(--purple)}
+
+.cards-container{position:relative;width:100%}
+.cards-scroll{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:16px;padding-bottom:12px;scrollbar-width:none}
+.cards-scroll::-webkit-scrollbar{display:none}
+.office-card{flex:0 0 100%;width:100%;background:var(--card);border-radius:16px;overflow:hidden;scroll-snap-align:center;display:flex;flex-direction:column;border:1px solid var(--line);position:relative}
+.office-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.card-head{padding:20px 20px 10px;position:relative}
+.card-year{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--gold);line-height:1}
+.card-badge{position:absolute;top:20px;right:20px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--purple);border:1px solid var(--purple);padding:4px 10px;border-radius:99px}
+.card-body{padding:0 20px 20px;flex-grow:1;display:flex;flex-direction:column}
+.card-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin-bottom:8px;color:#fff}
+.card-text{font-size:.95rem;color:#d9cfe9;margin-bottom:20px}
+.card-exam{margin-top:auto;background:rgba(0,0,0,0.3);padding:14px;border-radius:12px;font-size:.85rem;border-left:4px solid var(--gold);color:var(--muted)}
+.card-exam strong{display:block;font-family:'Inter';color:var(--gold);text-transform:uppercase;font-size:.75rem;letter-spacing:1px;margin-bottom:4px}
+
+.controls{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.ctrl-btn{width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:var(--gold);display:flex;justify-content:center;align-items:center;font-size:1.2rem;transition:.2s}
+.ctrl-btn:disabled{opacity:0.3;cursor:not-allowed}
+.ctrl-btn:not(:disabled):hover{background:var(--gold);color:#000}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;flex:1}
+.dots i{width:8px;height:8px;background:rgba(255,255,255,0.1);border-radius:50%;transition:.3s}
+.dots i.on{background:var(--gold);box-shadow:0 0 8px var(--gold);transform:scale(1.2)}
+
+/* Quiz Section */
+.quiz-section{background:linear-gradient(160deg,var(--bg2),#1c0c24);border:1px solid var(--line);border-radius:20px;padding:30px 20px;position:relative;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+.quiz-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--grad)}
+.quiz-header{text-align:center;margin-bottom:24px}
+.quiz-header h2{color:var(--gold);margin-bottom:0}
+
+.q-meta{display:flex;justify-content:space-between;font-family:'Inter';font-weight:600;font-size:0.9rem;color:var(--muted);margin-bottom:12px}
+.q-progress{height:4px;background:rgba(255,255,255,0.1);border-radius:2px;margin-bottom:24px}
+.q-fill{height:100%;background:var(--gold);border-radius:2px;transition:width 0.3s ease;box-shadow:0 0 10px var(--gold)}
+
+.q-text{font-size:1.15rem;font-weight:600;margin-bottom:20px;line-height:1.5;color:#fff}
+.q-opts{display:grid;gap:10px}
+.q-opt{background:rgba(0,0,0,0.3);border:1px solid var(--line);color:var(--text);padding:14px 18px;border-radius:12px;text-align:left;font-size:.95rem;width:100%;transition:.2s;font-weight:500}
+.q-opt:hover:not(:disabled){border-color:var(--purple);background:rgba(155,93,229,0.1)}
+.q-opt.correct{background:rgba(45,212,191,.1);border-color:var(--teal);color:var(--teal)}
+.q-opt.wrong{background:rgba(244,63,94,.1);border-color:#f43f5e;color:#f43f5e}
+
+.q-exp{margin-top:16px;background:rgba(0,0,0,0.4);padding:16px;border-radius:12px;border-left:4px solid var(--gold);display:none;font-size:.9rem;color:#d9cfe9}
+.q-next{margin-top:24px;background:var(--grad);color:#fff;padding:14px;font-family:'Inter';font-weight:800;font-size:1rem;border-radius:99px;letter-spacing:1px;display:none;width:100%;text-transform:uppercase;text-align:center;box-shadow:0 10px 24px -10px var(--purple);transition:.25s}
+.q-next:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--pink)}
+
+/* Results */
+.results{display:none;text-align:center}
+.res-score{font-family:'Playfair Display',serif;font-size:4rem;color:var(--gold);line-height:1;margin-bottom:10px;text-shadow:0 0 20px rgba(212,175,55,0.3)}
+.res-rank{font-family:'Inter';font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:2px;text-transform:uppercase}
+.res-msg{color:var(--muted);margin-bottom:24px;font-size:1rem;max-width:400px;margin-left:auto;margin-right:auto}
+.res-review{text-align:left;background:var(--card);border:1px solid var(--line);padding:16px;border-radius:12px;margin-bottom:24px;max-height:250px;overflow-y:auto}
+.res-review h4{color:var(--gold);font-family:'Inter';text-transform:uppercase;letter-spacing:1px;font-size:.85rem;margin-bottom:12px}
+.res-review div{margin-bottom:12px;font-size:.85rem;border-bottom:1px dashed rgba(255,255,255,0.1);padding-bottom:12px;color:#d9cfe9}
+.res-review div:last-child{border:none;margin-bottom:0;padding-bottom:0}
+.res-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn-alt{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)}
+.btn-alt:hover{background:var(--card);border-color:var(--gold);transform:none}
+
+/* Pledge */
+.sankalp{background:linear-gradient(160deg,var(--bg2),#1c0c24);border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:30px 20px;text-align:center}
+.pIn{width:100%;background:rgba(0,0,0,.35);border:1px solid var(--line);color:var(--text);padding:14px 16px;border-radius:12px;font:500 .95rem 'Inter';margin-bottom:12px;outline:none;transition:.2s}
+.pIn:focus{border-color:var(--gold)}
+.pIn::placeholder{color:var(--muted)}
+.pIn option{background:var(--card);color:var(--text)}
+.pBtn{width:100%;background:var(--grad);color:#fff;padding:14px;border-radius:99px;font:800 1rem 'Inter';text-transform:uppercase;letter-spacing:1px;box-shadow:0 10px 24px -10px var(--purple);transition:.25s;margin-top:8px}
+.pBtn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--pink)}
+
+.pCard{display:none;margin-top:24px;background:var(--card);border:1px solid rgba(212,175,55,.4);border-radius:16px;padding:24px;animation:rise .5s both;position:relative;overflow:hidden}
+.pCard::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--grad)}
+.pBadge{display:inline-block;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--gold);border:1px solid var(--gold);padding:4px 12px;border-radius:99px;margin-bottom:12px}
+.pCard h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;margin-bottom:8px}
+.pRole{display:inline-block;background:var(--grad);color:#fff;font-weight:800;font-size:.75rem;letter-spacing:.1em;padding:4px 12px;border-radius:99px;margin-bottom:16px}
+.pCard p{font-size:.95rem;color:#d6cbe8;line-height:1.6}
+.pFoot{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-family:'Playfair Display',serif;font-weight:900;font-size:.9rem;color:var(--gold);text-align:center;letter-spacing:.1em}
+
+.quote-box{background:rgba(0,0,0,0.3);border:1px solid rgba(212,175,55,0.3);padding:24px 20px;margin-top:30px;border-radius:16px;text-align:center;color:var(--muted)}
+.quote-box b{display:block;font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--gold);margin-bottom:12px;line-height:1.4;font-style:italic;font-weight:700}
+.quote-box span{color:#fff;font-weight:600;font-size:.95rem}
+
+footer{text-align:center;font-size:.75rem;color:var(--muted);padding:24px 20px 40px;border-top:1px solid var(--line);margin-top:40px}
+
+/* Animations */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+@media(max-width:760px){
+  section{padding:32px 0}
+  .res-actions{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+
+
+
+<div class="bar" id="d9-prog"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-title">Day 9 · Siddhidatri</div>
+    <div class="nav-actions">
+      <!-- Set to true by default for auto-play visual state -->
+      <button class="action-btn" id="d9-chant" aria-pressed="true" aria-label="Toggle Chant">
+        <span class="status-dot"></span> Chant
+      </button>
+      <button class="action-btn" id="d9-bell" aria-label="Ring Bell">Bell</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-banner-wrapper">
+    <img src="https://www.adda247.com/jobs/wp-content/uploads/2026/10/16132451/Maa-Siddhidatri-Devotional-Lotus-Banner.webp" alt="Maa Siddhidatri" class="hero-banner">
+  </div>
+  
+  <svg class="mandala floral" viewBox="0 0 600 600" aria-hidden="true">
+    <defs>
+      <path id="petal" d="M300,300 C350,220 380,120 300,30 C220,120 250,220 300,300 Z"></path>
+      <path id="petal-sm" d="M300,300 C330,240 340,160 300,90 C260,160 270,240 300,300 Z"></path>
+    </defs>
+    
+    <g class="spin-slow">
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(0 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(30 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(60 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(90 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(120 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(150 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(180 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(210 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(240 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(270 300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(300 300)"></use>
+      <use href="#petal" fill="none" stroke="var(--purple)" stroke-width="1.5" transform="rotate(330 300 300)"></use>
+    </g>
+
+    <g class="spin-reverse">
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(0 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(45 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(90 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(135 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(180 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(225 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(270 300 300)"></use>
+      <use href="#petal-sm" fill="none" stroke="var(--gold)" stroke-width="2" transform="rotate(315 300 300)"></use>
+    </g>
+
+    <circle cx="300" cy="300" r="160" fill="none" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="12 12" class="spin-fast"></circle>
+  </svg>
+
+  <div class="wrap">
+    <div class="tag rv">Navratri Day 9</div>
+    <h1 class="rv">Maa Siddhidatri &amp; <br><span>The Women Who Lead India</span></h1>
+    <p class="d rv">Maa Siddhidatri grants <em>siddhis</em> (perfections). Today, we honor her final form alongside the constitutional milestones that empower India's women to lead.</p>
+  </div>
+</header>
+
+<section id="devi">
+  <div class="wrap">
+    <div class="eyebrow rv">File 01</div>
+    <h2 class="rv">The Giver of <span>Siddhis</span></h2>
+    
+    <div class="content-grid">
+      <div class="text-block rv">
+        <p class="lead" style="margin-bottom:16px;">On the final day of Navratri, we worship Maa Siddhidatri, the bestower of supreme <em>siddhis</em> (perfections). She represents cosmic equality—a divine balance reflected in our republic's push for women-led governance.</p>
+        <p class="lead">From the 15 women in the Constituent Assembly to the historic 106th Amendment (Nari Shakti Vandan Adhiniyam), today we celebrate the milestones securing women's rightful place in leadership.</p>
+      </div>
+      
+      <div class="mantra-card rv">
+        <div class="mantra-sa">ॐ देवी सिद्धिदात्र्यै नमः॥</div>
+        <p class="mantra-en">Om Devi Siddhidatryai Namah.</p>
+        <div class="mantra-detail">
+          <strong>Colour of the day: Purple.</strong> It stands for ambition, power, and royal dignity—fitting for the Goddess who grants perfection and the women who lead.
+        </div>
+      </div>
+    </div>
+
+    <table class="elegant-table rv" aria-label="Goddess symbols and democratic parallels">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Democratic Parallel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lotus Base</td>
+          <td>Attaining the highest, purest offices of the Republic.</td>
+        </tr>
+        <tr>
+          <td>Chakra</td>
+          <td>The cycle of progressive laws (73rd, 74th, 106th Amendments).</td>
+        </tr>
+        <tr>
+          <td>Gada (Mace)</td>
+          <td>Authority exercised for inclusive development.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="milestones" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow rv">File 02</div>
+    <h2 class="rv">First Women in <span>Top Offices</span></h2>
+    
+    <div class="timeline-filter rv" id="d9-flt" role="group">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="cards-container rv">
+      <div class="cards-scroll" id="d9-track" tabindex="0">
+        <!-- Cards populated by JS -->
+      </div>
+      <div class="controls">
+        <button class="ctrl-btn" id="d9-pv" aria-label="Previous">←</button>
+        <div class="dots" id="d9-dots" aria-hidden="true"></div>
+        <button class="ctrl-btn" id="d9-nx" aria-label="Next">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="wrap">
+    <div class="quiz-section rv">
+      <div class="quiz-header">
+        <div class="eyebrow">File 03</div>
+        <h2>Claim Your Siddhi</h2>
+      </div>
+      
+      <div id="d9-qa">
+        <div class="q-meta">
+          <span id="d9-qn">Q 1 of 10</span>
+          <span id="d9-qs">Score: 0</span>
+        </div>
+        <div class="q-progress"><div class="q-fill" id="d9-qb"></div></div>
+        
+        <div class="q-text" id="d9-q"></div>
+        <div class="q-opts" id="d9-o"></div>
+        
+        <div class="q-exp" id="d9-why" aria-live="polite"></div>
+        <button class="q-next" id="d9-nq" type="button">Next Question</button>
+      </div>
+
+      <div class="results" id="d9-res" aria-live="polite">
+        <div class="res-score" id="d9-rb">0/10</div>
+        <div class="res-rank" id="d9-rr">Aspirant</div>
+        <div class="res-msg" id="d9-rt"></div>
+        
+        <div class="res-review" id="d9-rv" style="display:none;"></div>
+        
+        <div class="res-actions">
+          <button class="q-next" id="d9-sh" type="button" style="display:block;">Share Rank</button>
+          <button class="q-next btn-alt" id="d9-rs" type="button" style="display:block;">Retry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sankalp" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow rv">File 04</div>
+    <h2 class="rv">My Pledge for <span>Women-Led Development</span></h2>
+    <p class="lead rv">Commit to the realization of Nari Shakti.</p>
+    
+    <div class="sankalp rv">
+      <form id="d9-f">
+        <input type="text" id="d9-nm" class="pIn" placeholder="Enter your full name" required="">
+        <select id="d9-rl" class="pIn" required="">
+          <option value="" disabled="" selected="">Choose Your Goal</option>
+          <option>Support Women in Politics</option>
+          <option>Promote Equal Opportunity</option>
+          <option>Spread Legal Awareness</option>
+          <option>Encourage Female Leadership</option>
+          <option>Uphold Constitutional Values</option>
+        </select>
+        <button type="submit" class="pBtn">Take the Pledge</button>
+      </form>
+
+      <div id="d9-cert" class="pCard" aria-live="polite">
+        <div class="pBadge">Pledge Certificate • Navratri Day 9</div>
+        <h3 id="d9-cn">Name</h3>
+        <div id="d9-cr" class="pRole">GOAL</div>
+        <p id="d9-cp"></p>
+        <div class="pFoot">JAI MAA SIDDHIDATRI</div>
+      </div>
+    </div>
+
+    <div class="quote-box rv">
+      <b>"I measure the progress of a community by the degree of progress which women have achieved."</b>
+      <span>— Dr. B.R. Ambedkar</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap rv">
+    JAI MAA SIDDHIDATRI
+  </div>
+</footer>
+
+<script>
+(function(){
+  const $ = id => document.getElementById('d9-' + id);
+
+  const rvObs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('in'); rvObs.unobserve(e.target); }
+  }), {threshold: 0.12});
+  document.querySelectorAll('.rv:not(.in)').forEach(el => rvObs.observe(el));
+
+  /* --- Data: Carousel --- */
+  const CARDS = [
+    ["exec", "Executive", "1947", "Sarojini Naidu", "Became the Governor of the United Provinces, the first woman to hold this office in independent India.", "First woman Governor: Sarojini Naidu (1947)."],
+    ["dip", "Diplomacy", "1953", "Vijaya Lakshmi Pandit", "Elected as the first woman President of the UN General Assembly.", "First woman UNGA President: Vijaya Lakshmi Pandit."],
+    ["exec", "Executive", "1963", "Sucheta Kriplani", "Took oath as the Chief Minister of Uttar Pradesh, becoming India's first woman CM.", "First woman Chief Minister: Sucheta Kriplani."],
+    ["exec", "Executive", "1966", "Indira Gandhi", "Became the first (and to date, only) woman Prime Minister of India.", "First woman Prime Minister: Indira Gandhi."],
+    ["jud", "Judiciary", "1989", "Justice M. Fathima Beevi", "Appointed as a judge of the Supreme Court of India, the first woman to reach the apex court.", "First woman SC Judge: M. Fathima Beevi."],
+    ["exec", "Executive", "2007", "Pratibha Patil", "Sworn in as the 12th President of India, becoming the first woman to hold the highest constitutional office.", "First woman President: Pratibha Patil."],
+    ["legis", "Legislature", "2009", "Meira Kumar", "Elected unopposed as the first woman Speaker of the Lok Sabha.", "First woman Lok Sabha Speaker: Meira Kumar."],
+    ["exec", "Executive", "2022", "Droupadi Murmu", "Sworn in as the 15th President of India, the first tribal woman to hold the office.", "First tribal woman President: Droupadi Murmu."]
+  ];
+
+  const track = $('track'), dots = $('dots'), cards = [];
+  CARDS.forEach(c => {
+    const el = document.createElement('article');
+    el.className = 'office-card';
+    el.innerHTML = `
+      <div class="card-head">
+        <span class="card-badge" style="color:var(--${c[0]==='exec'?'gold':c[0]==='dip'?'purple':c[0]==='jud'?'pink':'teal'}); border-color:currentColor">${c[1]}</span>
+        <div class="card-year">${c[2]}</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-name">${c[3]}</h3>
+        <p class="card-text">${c[4]}</p>
+        <div class="card-exam">
+          <strong>Exam Line</strong>
+          ${c[5]}
+        </div>
+      </div>`;
+    track.appendChild(el);
+    cards.push(el);
+    dots.appendChild(document.createElement('i'));
+  });
+
+  let curCard = 0;
+  function updateCarousel() {
+    const mid = track.scrollLeft + track.clientWidth / 2;
+    let best = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      if(c.style.display !== 'none') {
+        const dist = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
+        if(dist < minDist) { minDist = dist; best = i; }
+      }
+    });
+    curCard = best;
+    Array.from(dots.children).forEach((d, i) => d.className = i === curCard ? 'on' : '');
+    
+    const visibleIdxs = cards.map((c, i) => c.style.display !== 'none' ? i : -1).filter(i => i !== -1);
+    const curPos = visibleIdxs.indexOf(curCard);
+    
+    $('pv').disabled = curPos <= 0;
+    $('nx').disabled = curPos >= visibleIdxs.length - 1;
+  }
+
+  function scrollCarousel(dir) {
+    const visibleIdxs = cards.map((c, i) => c.style.display !== 'none' ? i : -1).filter(i => i !== -1);
+    const curPos = visibleIdxs.indexOf(curCard);
+    const nextPos = curPos + dir;
+    if(nextPos >= 0 && nextPos < visibleIdxs.length) {
+      const x = cards[visibleIdxs[nextPos]].offsetLeft;
+      track.scrollTo ? track.scrollTo({left: x, behavior: 'smooth'}) : track.scrollLeft = x;
+    }
+  }
+
+  $('pv').onclick = () => scrollCarousel(-1);$('nx').onclick = () => scrollCarousel(1);
+  track.addEventListener('scroll', () => requestAnimationFrame(updateCarousel), {passive: true});
+  setTimeout(updateCarousel, 100);
+
+  /* --- Filters --- */
+  const FILTERS = [['all', 'All'], ['exec', 'Executive'], ['legis', 'Legislature'], ['jud', 'Judiciary'], ['dip', 'Diplomacy']];
+  const fltBox = $('flt');
+  FILTERS.forEach((f, k) => {
+    const b = document.createElement('button');
+    b.className = 'filter-btn';
+    b.textContent = f[1];
+    b.setAttribute('aria-pressed', k === 0 ? 'true' : 'false');
+    b.onclick = () => {
+      Array.from(fltBox.children).forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true');
+      cards.forEach((c, i) => {
+        const match = f[0] === 'all' || CARDS[i][0] === f[0];
+        c.style.display = match ? 'flex' : 'none';
+        dots.children[i].style.display = match ? 'block' : 'none';
+      });
+      setTimeout(() => { track.scrollLeft = 0; updateCarousel(); }, 50);
+    };
+    fltBox.appendChild(b);
+  });
+
+  /* --- Quiz --- */
+  const QUIZ = [
+    ["According to belief, Lord Shiva attained his Ardhanarishvara (half-woman) form by the grace of:", ["Maa Siddhidatri", "Maa Kalaratri", "Maa Kushmanda", "Maa Katyayani"], 0, "Maa Siddhidatri is the giver of siddhis (accomplishments)."],
+    ["The ninth day of Navratri, dedicated to Maa Siddhidatri, is called:", ["Maha Navami", "Durga Ashtami", "Vijayadashami", "Lalita Panchami"], 0, "The ninth day is celebrated as Maha Navami."],
+    ["The Nari Shakti Vandan Adhiniyam, 2023, which reserves one-third of seats for women, is which Constitutional Amendment?", ["106th", "104th", "105th", "108th"], 0, "It is the 106th Amendment Act, 2023."],
+    ["Which Article, inserted by the 106th Amendment, reserves seats for women in the Lok Sabha?", ["Article 330A", "Article 332A", "Article 243D", "Article 334A"], 0, "Article 330A. Article 332A covers State Assemblies."],
+    ["Reservation of at least one-third of Panchayat seats for women is provided under:", ["Article 243D", "Article 243T", "Article 243G", "Article 243K"], 0, "Article 243D, from the 73rd Amendment."],
+    ["How many women were members of the Constituent Assembly?", ["15", "9", "12", "21"], 0, "There were 15 women, including Hansa Mehta and Durgabai Deshmukh."],
+    ["Who was the first woman Governor of an Indian state?", ["Sarojini Naidu", "Sucheta Kriplani", "Vijaya Lakshmi Pandit", "Padmaja Naidu"], 0, "Sarojini Naidu became Governor of the United Provinces from 1947."],
+    ["Who was India's first woman Chief Minister?", ["Sucheta Kriplani", "Nandini Satpathy", "Sarojini Naidu", "J. Jayalalithaa"], 0, "Sucheta Kriplani, of Uttar Pradesh in 1963."],
+    ["Who was the first woman judge of the Supreme Court of India?", ["M. Fathima Beevi", "Leila Seth", "Anna Chandy", "Sujata Manohar"], 0, "M. Fathima Beevi (1989). Anna Chandy was the first woman High Court judge."],
+    ["Who was the first woman President of the UN General Assembly?", ["Vijaya Lakshmi Pandit", "Indira Gandhi", "Sarojini Naidu", "Rajkumari Amrit Kaur"], 0, "Vijaya Lakshmi Pandit, in 1953."]
+  ];
+
+  let qIdx = 0, score = 0, qLocked = false, missed = [], finalRank = "";
+  function shuffle(arr) {
+    let b = [...arr];
+    for(let i = b.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [b[i], b[j]] = [b[j], b[i]];
+    }
+    return b;
+  }
+
+  function loadQ() {
+    const d = QUIZ[qIdx]; qLocked = false;
+    $('qn').textContent = `Q ${qIdx + 1} of ${QUIZ.length}`;
+    $('qs').textContent = `Score: ${score}`;
+    $('qb').style.width = `${(qIdx / QUIZ.length) * 100}%`;
+    $('q').textContent = d[0];
+    $('why').style.display = 'none';$('nq').style.display = 'none';
+    
+    const obox = $('o'); obox.innerHTML = '';
+    const opts = shuffle(d[1].map((txt, k) => ({t: txt, k})));
+    opts.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'q-opt'; btn.textContent = opt.t;
+      btn.onclick = () => selectQ(btn, opt.k === d[2], d);
+      obox.appendChild(btn);
+    });
+  }
+
+  function selectQ(btn, isOk, d) {
+    if(qLocked) return; qLocked = true;
+    Array.from($('o').children).forEach(b => {
+      b.disabled = true;
+      if(b.textContent === d[1][d[2]]) b.classList.add('correct');
+    });
+    if(isOk) { score++; playTone(true); } 
+    else { btn.classList.add('wrong'); playTone(false); missed.push(d); }
+    
+    $('qs').textContent = `Score: ${score}`;
+    $('why').innerHTML = `<strong>${isOk ? 'Correct!' : 'Incorrect.'}</strong> ${d[3]}`;
+    $('why').style.display = 'block';
+    $('nq').textContent = qIdx === QUIZ.length - 1 ? 'See Results' : 'Next Question';$('nq').style.display = 'block';
+  }
+
+  $('nq').onclick = () => {
+    qIdx++;
+    if(qIdx < QUIZ.length) return loadQ();
+    
+    $('qa').style.display = 'none';$('res').style.display = 'block';
+    const p = score / QUIZ.length;
+    let r, txt;
+    if(p >= 0.9) { r = 'President'; txt = 'Outstanding. You are completely exam ready.'; }
+    else if(p >= 0.7) { r = 'Cabinet Minister'; txt = 'Strong result. Revise the articles you missed and you are set.'; }
+    else if(p >= 0.5) { r = 'Parliamentarian'; txt = 'A good start. Go back through the timeline and try again.'; }
+    else { r = 'Aspirant'; txt = 'Every leader starts somewhere. Review the cards once more and retry.'; }
+    
+    finalRank = r;
+    $('rb').textContent = `${score} / ${QUIZ.length}`;
+    $('rr').textContent = `Rank: ${r}`;
+    $('rt').textContent = txt;
+    
+    const rvBox = $('rv'); rvBox.innerHTML = '';
+    if(missed.length > 0) {
+      rvBox.style.display = 'block';
+      rvBox.innerHTML = '<h4>Review Notes</h4>';
+      missed.forEach(m => {
+        const d = document.createElement('div');
+        d.innerHTML = `<strong>${m[0]}</strong><br>${m[1][m[2]]} - ${m[3]}`;
+        rvBox.appendChild(d);
+      });
+    } else { rvBox.style.display = 'none'; }
+  };
+
+  $('rs').onclick = () => {
+    qIdx = 0; score = 0; missed = [];
+    $('res').style.display = 'none';$('qa').style.display = 'block';
+    loadQ();
+  };
+  loadQ();
+
+  $('sh').onclick = () => {
+    const txt = `I scored ${score}/${QUIZ.length} (Rank: ${finalRank}) in the Navratri Day 9 Women Who Lead quiz on Adda247!`;
+    if(navigator.share) navigator.share({title: document.title, text: txt, url: location.href}).catch(()=>{});
+    else if(navigator.clipboard) navigator.clipboard.writeText(`${txt} ${location.href}`).then(() => $('sh').textContent='Copied!');
+  };
+
+  /* --- Pledge --- */
+  const PLEDGE_MAP = {
+    "Support Women in Politics": "I pledge to support and vote for capable female leaders in public office.",
+    "Promote Equal Opportunity": "I pledge to actively dismantle barriers for women in my workplace and community.",
+    "Spread Legal Awareness": "I pledge to spread awareness about constitutional rights and the Nari Shakti Vandan Adhiniyam.",
+    "Encourage Female Leadership": "I pledge to mentor and encourage young women to take up leadership roles.",
+    "Uphold Constitutional Values": "I pledge to uphold the vision of equality embedded in our Constitution by its founding mothers."
+  };
+
+  $('f').onsubmit = e => {
+    e.preventDefault();
+    const n = $('nm').value.trim(), r =$('rl').value;
+    if(!n || !r) return;
+    $('cn').textContent = n;
+    $('cr').textContent = r.toUpperCase();$('cp').textContent = PLEDGE_MAP[r] || '';
+    $('cert').style.display = 'block';$('cert').scrollIntoView({behavior: 'smooth', block: 'center'});
+  };
+
+  /* --- Scroll Progress --- */
+  window.addEventListener('scroll', () => {
+    const d = document.documentElement, h = d.scrollHeight - d.clientHeight, y = window.scrollY || 0;
+    $('prog').style.width = h > 0 ? `${(y / h * 100)}%` : '0%';
+  }, {passive: true});
+
+  /* --- Audio Context for Quiz Tones & Bell --- */
+  let audioCtx = null;
+  function getAudioCtx() {
+    const A = window.AudioContext || window.webkitAudioContext;
+    if(!A) return null;
+    if(!audioCtx) audioCtx = new A();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+
+  function playTone(good) {
+    try {
+      const c = getAudioCtx(); if(!c) return;
+      const t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+      o.type = good ? 'sine' : 'triangle';
+      o.frequency.value = good ? 880 : 300;
+      g.gain.setValueAtTime(0.001, t);
+      g.gain.linearRampToValueAtTime(0.1, t + 0.05);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+      o.connect(g); g.connect(c.destination);
+      o.start(t); o.stop(t + 0.35);
+    } catch(e){}
+  }
+
+  function ringBell() {
+    try {
+      const c = getAudioCtx(); if(!c) return;
+      const t = c.currentTime, m = c.createGain();
+      m.gain.value = 0.5; m.connect(c.destination);
+      [[0.5, 0.3, 3.4], [1, 0.8, 3], [1.19, 0.38, 2.5], [1.56, 0.3, 2]].forEach(p => {
+        [-1, 1].forEach(dt => {
+          const o = c.createOscillator(), g = c.createGain();
+          o.type = 'sine'; o.frequency.value = 690 * p[0] + dt;
+          g.gain.setValueAtTime(0, t);
+          g.gain.linearRampToValueAtTime(p[1]*0.2, t + 0.01);
+          g.gain.exponentialRampToValueAtTime(0.001, t + p[2]);
+          o.connect(g); g.connect(m); o.start(t); o.stop(t + p[2] + 0.1);
+        });
+      });
+    } catch(e){}
+  }
+  $('bell').onclick = ringBell;
+
+  /* --- Explicit Chant Button Logic (Autoplay enabled) --- */
+  const chantUrl = 'https://www.adda247.com/jobs/wp-content/uploads/2026/10/17174150/aigiri-nandini-instrumental_UueKt4r8-1.mp3';
+  let bgAudio = new Audio(chantUrl);
+  bgAudio.loop = true;
+  bgAudio.volume = 0.6;
+  
+  // Set default state to true
+  let chantOn = true;
+
+  // Modern browsers block autoplay. Try playing immediately; if it fails, wait for the first user interaction.
+  bgAudio.play().catch(() => {
+    const startAudioOnInteract = () => {
+      if (chantOn) {
+        bgAudio.play().catch(() => {});
+      }
+      // Remove listeners after first interaction to prevent redundant calls
+      ['click', 'touchstart', 'keydown', 'scroll'].forEach(e => document.removeEventListener(e, startAudioOnInteract));
+    };
+    
+    // Add 'scroll' to the list of events that trigger the audio
+    ['click', 'touchstart', 'keydown', 'scroll'].forEach(e => document.addEventListener(e, startAudioOnInteract, {once: true}));
+  });
+
+  $('chant').onclick = function() {
+    chantOn = !chantOn;
+    this.setAttribute('aria-pressed', chantOn ? 'true' : 'false');
+    
+    if (chantOn) {
+      bgAudio.play().catch(e => {
+        console.error("Audio playback failed:", e);
+        chantOn = false;
+        this.setAttribute('aria-pressed', 'false');
+      });
+    } else {
+      bgAudio.pause();
+    }
+  };
+
+})();
+</script>
+

@@ -1,0 +1,1725 @@
+
+
+
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#300d38">
+  <title>Top Content for Nursing Aspirants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <style>
+    /* =========================================================
+       VELVET ORANGE & PURPLE THEME
+       ========================================================= */
+    :root {
+      /* Velvet Purple Palette */
+      --purple-dark: #2c0b32; /* Deep eggplant */
+      --purple-main: #4a154b; /* Velvet purple */
+      --purple-light: #834b85;
+      --purple-fade: #f7eff7; 
+      
+      /* Velvet Orange Palette */
+      --orange-main: #f05a28; /* Vibrant velvet orange */
+      --orange-glow: #ff7b00;
+      --orange-light: #ffece6;
+      
+      /* Neutrals & Base */
+      --bg-page: #faf8fb; /* Warm off-white with purple tint */
+      --bg-card: #ffffff;
+      --text-main: #2d2430;
+      --text-muted: #6e6473;
+      --border-color: #ebddeb;
+      
+      /* Shadows */
+      --shadow-sm: 0 4px 12px rgba(74, 21, 75, 0.04);
+      --shadow-md: 0 12px 32px rgba(74, 21, 75, 0.08);
+      --shadow-orange: 0 8px 24px rgba(240, 90, 40, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      margin: 0;
+      background: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    button, a { font: inherit; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; }
+    
+    .shell { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+
+    /* --- HERO & TOPBAR (Unified Velvet Look) --- */
+    .topbar {
+      background: var(--purple-dark);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .topbar-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .publication-title {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .date-chip {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 99px;
+      padding: 7px 14px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    
+    .hero {
+      padding: 40px 0 30px;
+      background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-main) 100%);
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%; right: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(240, 90, 40, 0.15) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--orange-glow);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .eyebrow:before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--orange-glow);
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin: 14px 0;
+      font-weight: 800;
+    }
+    .hero p {
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 0 22px;
+      font-size: 14px;
+    }
+    
+    /* --- QUICK NAV (Floating Pills) --- */
+    .quick-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .quick-nav a {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      backdrop-filter: blur(4px);
+    }
+    .quick-nav a:hover {
+      background: var(--orange-main);
+      border-color: var(--orange-main);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-orange);
+    }
+
+    /* --- LAYOUT & TYPOGRAPHY --- */
+    .main { padding: 35px 0 60px; }
+    .section { margin-bottom: 30px; scroll-margin-top: 20px; }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 16px;
+    }
+    .section-kicker {
+      font-size: 10px;
+      color: var(--orange-main);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .section h2 {
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin: 4px 0 0;
+      color: var(--purple-dark);
+    }
+    .section-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* --- BUTTONS --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 11px;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .btn-red {
+      background: var(--orange-main);
+      color: #fff;
+      box-shadow: var(--shadow-orange);
+    }
+    .btn-red:hover {
+      background: var(--orange-glow);
+    }
+    .text-btn {
+      border: 0;
+      background: transparent;
+      color: var(--purple-main);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+    .text-btn:hover {
+      background: var(--purple-fade);
+      color: var(--purple-dark);
+    }
+
+    /* --- MOTIVATION PULL-QUOTE --- */
+    .motivation {
+      padding: 24px;
+      border-radius: 20px;
+      background: var(--purple-fade);
+      border-left: 4px solid var(--purple-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      color: var(--text-main);
+    }
+    .motivation .quote-mark {
+      font-size: 28px;
+      color: var(--purple-light);
+      opacity: 0.4;
+      line-height: 1;
+      margin-top: -4px;
+    }
+    .motivation h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: var(--purple-dark);
+    }
+    .motivation p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* --- CURRENT AFFAIRS --- */
+    .ca-tools {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .ca-search {
+      flex: 1;
+      max-width: 400px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--bg-card);
+      padding: 12px 16px;
+      font: inherit;
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .ca-search:focus {
+      border-color: var(--purple-main);
+      box-shadow: 0 0 0 3px var(--purple-fade);
+    }
+    .ca-result-count {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .ca-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .ca-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .ca-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--purple-light);
+    }
+    .ca-top {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .ca-num {
+      height: 34px;
+      min-width: 34px;
+      border-radius: 10px;
+      background: var(--orange-main);
+      color: #fff;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      box-shadow: var(--shadow-orange);
+    }
+    .ca-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .tag {
+      display: inline-flex;
+      border-radius: 99px;
+      padding: 4px 10px;
+      background: var(--orange-light);
+      color: var(--orange-main);
+      font-size: 9px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .ca-card h3 {
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0 0 6px;
+      color: var(--purple-dark);
+    }
+    .ca-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .ca-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .ca-details {
+      display: none;
+      margin: 14px 0 0 0;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 12px;
+      color: var(--text-main);
+      white-space: pre-line;
+    }
+    .ca-card.expanded { grid-column: 1 / -1; }
+    .ca-card.expanded .ca-details { display: block; }
+    .ca-card.expanded p { -webkit-line-clamp: unset; }
+    .ca-card.expanded .toggle-details i { transform: rotate(180deg); }
+
+    /* --- PDF CARD --- */
+    .pdf-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px;
+      background: linear-gradient(120deg, var(--bg-card) 0%, var(--purple-fade) 100%);
+      border: 1px solid var(--purple-light);
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .pdf-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--purple-main);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(74, 21, 75, 0.3);
+    }
+    .pdf-copy { flex: 1; min-width: 0; }
+    .article-label {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--orange-main);
+      margin-bottom: 4px;
+    }
+    .pdf-copy h3 {
+      font-size: 16px;
+      margin: 0 0 4px;
+      color: var(--purple-dark);
+    }
+    .pdf-copy p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* --- EXAM NAV & ACCORDION --- */
+    .exam-jump-wrap {
+      margin: 0 0 24px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+    }
+    .exam-jump-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .exam-jump-heading-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--purple-main);
+      color: #fff;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(74, 21, 75, 0.2);
+    }
+    .exam-jump-heading b {
+      display: block;
+      font-size: 14px;
+      color: var(--purple-dark);
+    }
+    .exam-jump-heading small {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .exam-jump-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+    .exam-jump-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      background: var(--bg-page);
+      text-align: left;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+    .exam-jump-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--purple-light);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-md);
+    }
+    .exam-jump-card.is-active {
+      border-color: var(--orange-main);
+      background: var(--orange-light);
+      box-shadow: 0 0 0 1px var(--orange-main);
+    }
+    .exam-jump-card.all-exams-card {
+      background: var(--purple-main);
+      border-color: var(--purple-main);
+      color: #fff;
+    }
+    .exam-jump-card.all-exams-card.is-active {
+      background: var(--purple-dark);
+      border-color: var(--orange-glow);
+    }
+    .exam-jump-card.all-exams-card .exam-jump-copy b,
+    .exam-jump-card.all-exams-card .exam-jump-copy small,
+    .exam-jump-card.all-exams-card .exam-jump-arrow {
+      color: #fff;
+    }
+    .exam-jump-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: var(--purple-fade);
+      color: var(--purple-main);
+      font-size: 14px;
+    }
+    .exam-jump-card.all-exams-card .exam-jump-icon {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+    .exam-jump-copy { flex: 1; min-width: 0; }
+    .exam-jump-copy b { display: block; font-size: 12px; }
+    .exam-jump-copy small { display: block; font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+    .exam-jump-click-count {
+      display: inline-flex;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: var(--orange-light);
+      color: var(--orange-main);
+      font-size: 9px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    .exam-jump-card.all-exams-card .exam-jump-click-count {
+      background: rgba(255,255,255,0.2); color: #fff;
+    }
+    .exam-jump-arrow { color: var(--text-muted); font-size: 12px; }
+
+    /* --- EXAM LIST ITEMS --- */
+    .exam-list { display: grid; gap: 12px; }
+    .exam-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .exam-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border: 0;
+      background: var(--bg-card);
+      text-align: left;
+      color: var(--text-main);
+      transition: background 0.2s;
+    }
+    .exam-item.open .exam-trigger {
+      background: var(--purple-fade);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .exam-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--purple-main);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .exam-name { flex: 1; min-width: 0; }
+    .exam-name b { font-size: 14px; display: block; color: var(--purple-dark); }
+    .exam-name span { font-size: 11px; color: var(--text-muted); }
+    .exam-count {
+      font-size: 10px;
+      color: var(--purple-main);
+      background: var(--purple-fade);
+      border-radius: 99px;
+      padding: 5px 10px;
+      font-weight: 700;
+    }
+    .live-click-count { background: var(--orange-light); color: var(--orange-main); }
+    .exam-trigger > i { color: var(--text-muted); transition: 0.2s; margin-left: 8px; }
+    .exam-item.open .exam-trigger > i { transform: rotate(180deg); }
+    
+    .exam-resources {
+      display: none;
+      padding: 16px;
+      background: var(--bg-page);
+    }
+    .exam-item.open .exam-resources {
+      display: grid;
+      gap: 10px;
+    }
+    .resource {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      background: var(--bg-card);
+      transition: 0.2s;
+    }
+    .resource:hover { border-color: var(--purple-light); box-shadow: var(--shadow-sm); }
+    .resource-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--orange-light);
+      color: var(--orange-main);
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+    .resource-copy { flex: 1; min-width: 0; }
+    .resource-copy b { display: block; font-size: 13px; color: var(--text-main); }
+    .resource-copy span { display: block; font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .resource-action { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .resource .btn {
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: var(--purple-fade);
+      color: var(--purple-main);
+    }
+    .resource .btn:hover { background: var(--purple-main); color: #fff; }
+    .resource-click-count {
+      display: inline-block;
+      color: var(--orange-main);
+      background: var(--orange-light);
+      border-radius: 99px;
+      padding: 2px 8px;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    /* --- BATCH CARD & PLEDGE --- */
+    .batch-card {
+      padding: 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--purple-fade) 100%);
+      border-left: 5px solid var(--purple-main);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .batch-copy h3 { font-size: 18px; margin: 0 0 6px; color: var(--purple-dark); }
+    .batch-copy p { font-size: 13px; color: var(--text-muted); margin: 0; }
+    .batch-card .btn { background: var(--purple-main); color: #fff; padding: 12px 20px; }
+    .batch-card .btn:hover { background: var(--purple-dark); box-shadow: var(--shadow-md); }
+
+    .pledge {
+      background: linear-gradient(135deg, var(--orange-main), var(--orange-glow));
+      color: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: var(--shadow-orange);
+    }
+    .pledge .symbol { font-size: 32px; color: rgba(255,255,255,0.9); }
+    .pledge-copy { flex: 1; }
+    .pledge h3 { font-size: 18px; margin: 0 0 6px; color: #fff; }
+    .pledge p { font-size: 13px; color: rgba(255,255,255,0.85); margin: 0; }
+    .pledge .btn {
+      background: #fff;
+      color: var(--orange-main);
+      white-space: nowrap;
+      padding: 12px 20px;
+    }
+    .pledge.accepted { outline: 3px solid rgba(240, 90, 40, 0.4); outline-offset: 4px; }
+
+    /* --- FOOTER & MISC --- */
+    .footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.6);
+      padding: 24px 0;
+      font-size: 12px;
+      border-top: 4px solid var(--orange-main);
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    .footer strong { color: #fff; }
+    
+    .empty {
+      border: 1px dashed var(--border-color);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      background: var(--bg-card);
+    }
+    .empty i { font-size: 24px; color: var(--purple-light); margin-bottom: 10px; }
+    
+    .toast {
+      position: fixed; left: 50%; bottom: 22px;
+      transform: translate(-50%, 20px);
+      opacity: 0; pointer-events: none; z-index: 20;
+      background: var(--purple-dark); color: #fff;
+      border-radius: 12px; padding: 12px 20px;
+      box-shadow: var(--shadow-md); font-size: 13px;
+      transition: 0.3s; max-width: calc(100% - 32px);
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    
+    .loader { padding: 40px; text-align: center; color: var(--text-muted); }
+    .spinner {
+      display: inline-block; width: 28px; height: 28px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--orange-main);
+      border-radius: 50%; animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hidden { display: none !important; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid var(--purple-light) !important;
+      outline-offset: 3px !important;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media(max-width: 760px) {
+      .shell { padding: 0 16px; }
+      .hero { padding: 30px 0 20px; }
+      h1 { font-size: 32px; letter-spacing: -0.5px; }
+      .hero p { font-size: 13px; }
+      .quick-nav a { padding: 8px 14px; font-size: 10px; }
+      .section h2 { font-size: 20px; }
+      .ca-tools { flex-direction: column; align-items: stretch; }
+      .ca-search { max-width: none; }
+      .ca-list { grid-template-columns: 1fr; }
+      .ca-card.expanded { grid-column: auto; }
+      .pdf-card { flex-direction: column; align-items: flex-start; }
+      .pdf-card .btn { width: 100%; }
+      .exam-jump-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .resource { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .resource-action { width: 100%; align-items: flex-start; flex-direction: row; justify-content: space-between; margin-left: 0; }
+      .batch-card { flex-direction: column; align-items: flex-start; }
+      .batch-card .btn { width: 100%; }
+      .pledge { flex-direction: column; align-items: flex-start; }
+      .pledge .btn { width: 100%; }
+    }
+  </style>
+
+
+
+  <header class="topbar" id="top">
+    <div class="shell topbar-inner">
+      <div class="publication-title"><i class="fa-solid fa-user-nurse"></i> Nursing Aspirants</div>
+      <div class="date-chip" id="todayLabel">Today</div>
+    </div>
+  </header>
+  
+  <section class="hero" id="intro">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">Your daily nursing brief</div>
+        <h1 id="heroHeadline">Top Content for Nursing Aspirants</h1>
+        <p id="heroCopy">A clear daily roundup of current affairs, exam updates and useful study resources.</p>
+        <nav class="quick-nav" aria-label="Jump to dashboard section">
+          <a href="#current-affairs"><i class="fa-regular fa-newspaper"></i> Current Affairs</a>
+          <a href="#daily-material"><i class="fa-solid fa-file-pdf"></i> Daily Article</a>
+          <a href="#exam-openings"><i class="fa-solid fa-bullseye"></i> Exam Resources</a>
+          <a href="#nursing-batch"><i class="fa-solid fa-graduation-cap"></i> Batch</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+  
+  <main class="main shell">
+    <section class="section" aria-label="Daily motivation">
+      <div class="motivation">
+        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+        <div>
+          <h3 id="motivationOneHeading">Your effort today is building your tomorrow.</h3>
+          <p id="motivationOneCopy">Stay consistent. Every focused session takes you one step closer.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="current-affairs">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Stay exam-ready</div>
+          <h2>Top Current Affairs</h2>
+        </div>
+        <div class="section-note" id="caResultCount">Important updates</div>
+      </div>
+      <div class="ca-tools">
+        <input class="ca-search" id="caSearch" type="search" placeholder="Search current affairs by title or topic…" aria-label="Search current affairs">
+        <span class="ca-result-count" id="caSearchCount">Showing updates</span>
+      </div>
+      <div id="caList" class="ca-list">
+        <div class="loader"><div class="spinner"></div><br>Loading current affairs…</div>
+      </div>
+    </section>
+    
+    <section class="section" aria-label="Motivation after current affairs">
+      <div class="motivation">
+        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+        <div>
+          <h3 id="motivationTwoHeading">One page revised is better than one page postponed.</h3>
+          <p id="motivationTwoCopy">Keep showing up for the work that matters to your goal.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="daily-material">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Read. Revise. Repeat.</div>
+          <h2>Current Affairs in Short</h2>
+        </div>
+        <div class="section-note">Daily article • Detailed updates</div>
+      </div>
+      <div id="pdfCard">
+        <div class="pdf-card">
+          <div class="pdf-icon"><i class="fa-solid fa-newspaper"></i></div>
+          <div class="pdf-copy">
+            <span class="article-label">TODAY'S HIGHLIGHT</span>
+            <h3>Current Affairs in Short</h3>
+            <p>Read today’s important current affairs with detailed explanations.</p>
+          </div>
+          <button class="btn btn-red" disabled=""><i class="fa-solid fa-arrow-right"></i> Read More</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="exam-openings">
+      <div class="exam-jump-wrap" id="examJumpWrap">
+        <div class="exam-jump-heading">
+          <span class="exam-jump-heading-icon"><i class="fa-solid fa-bolt"></i></span>
+          <span>
+            <b>Jump to your exam</b>
+            <small>Choose an exam to see only its resources</small>
+          </span>
+        </div>
+        <nav class="exam-jump-nav" id="examJumpNav" aria-label="Jump to exam resources"></nav>
+      </div>
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Practice with purpose</div>
+          <h2>Current Exam Openings &amp; Resources</h2>
+        </div>
+        <div class="section-note">Quizzes, articles and study hubs</div>
+      </div>
+      <div id="examList" class="exam-list">
+        <div class="loader"><div class="spinner"></div><br>Loading exam resources…</div>
+      </div>
+    </section>
+    
+    <section class="section" aria-label="Motivation after exam resources">
+      <div class="motivation">
+        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+        <div>
+          <h3 id="motivationThreeHeading">Your result is built by the effort you repeat.</h3>
+          <p id="motivationThreeCopy">Focus on today's next step; progress will follow.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="nursing-batch">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Take the next step</div>
+          <h2>Nursing Preparation Batch</h2>
+        </div>
+      </div>
+      <div id="batchList" class="batch-list">
+        <div class="empty"><i class="fa-solid fa-layer-group"></i><br>Batch details will appear here.</div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="pledge" id="pledgeBox">
+        <div class="symbol"><i class="fa-solid fa-hand-fist"></i></div>
+        <div class="pledge-copy">
+          <h3 id="pledgeHeading">Today's commitment</h3>
+          <p id="pledgeCopy">I will focus on my targets, learn from mistakes and keep moving forward.</p>
+        </div>
+        <button class="btn" id="pledgeButton"><i class="fa-solid fa-check"></i> Take the pledge</button>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span><strong>Top Content for Nursing Aspirants</strong></span>
+      <span>Stay consistent. Keep improving. Keep going.</span>
+    </div>
+  </footer>
+  
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  
+  <script>
+    'use strict';
+    var dashboardData = null;
+    var toastTimer = null;
+    
+    function el(id){return document.getElementById(id)}
+    function escapeHtml(value){return String(value==null?'':value).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+    function showToast(message){var t=el('toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show')},2600)}
+    function safeLink(url){var value=String(url==null?'':url).trim();if(!value)return '';if(/^https?:\/\//i.test(value))return value;if(/^(?:www\.)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(?::\d+)?(?:[\/?#]|$)/i.test(value))return 'https://'+value;if(/^tel:/i.test(value))return value;return ''}
+    function linkButton(url,label,icon){var href=safeLink(url);if(!href)return '<button class="btn" disabled style="opacity:.5;cursor:not-allowed" title="Add a valid URL in the Google Sheet">'+(icon?'<i class="fa-solid '+icon+'"></i> ':'')+escapeHtml(label||'Add link')+'</button>';return '<a class="btn" href="'+escapeHtml(href)+'" target="_blank" rel="noopener noreferrer">'+(icon?'<i class="fa-solid '+icon+'"></i> ':'')+escapeHtml(label||'Open')+'</a>'}
+    
+    function renderMotivationBoxes(items){
+      var list=(items||[]).filter(function(x){
+        var section=String(x.section||'').toLowerCase();
+        return section.indexOf('pledge')===-1 && section.indexOf('commitment')===-1 && section.indexOf('daily pledge')===-1;
+      });
+      var defaults=[
+        ['Your effort today is building your tomorrow.','Stay consistent. Every focused session takes you one step closer.'],
+        ['One page revised is better than one page postponed.','Keep showing up for the work that matters to your goal.'],
+        ['Your result is built by the effort you repeat.','Focus on today’s next step; progress will follow.']
+      ];
+      var ids=[['motivationOneHeading','motivationOneCopy'],['motivationTwoHeading','motivationTwoCopy'],['motivationThreeHeading','motivationThreeCopy']];
+      ids.forEach(function(pair,i){var m=list[i]||{};el(pair[0]).textContent=m.heading||defaults[i][0];el(pair[1]).textContent=m.description||defaults[i][1]});
+    }
+    
+    function applyCurrentAffairsSearch(){var input=el('caSearch');var cards=Array.prototype.slice.call(el('caList').querySelectorAll('.ca-card'));var query=String(input&&input.value||'').trim().toLowerCase();var shown=0;cards.forEach(function(card){var match=!query||card.textContent.toLowerCase().indexOf(query)>=0;card.style.display=match?'':'none';if(match)shown++});var count=el('caSearchCount');if(count)count.textContent=query?'Showing '+shown+' matching update'+(shown===1?'':'s'):'Showing up to 10 updates';var total=el('caResultCount');if(total)total.textContent=query?shown+' matches':cards.length + ' important updates'}
+    
+    function renderCurrentAffairs(items){
+      var root=el('caList');
+      if(!items||!items.length){root.innerHTML='<div class="empty"><i class="fa-regular fa-newspaper"></i><br>No current affairs added yet.</div>';return}
+      root.innerHTML=items.slice(0,10).map(function(item,i){
+        var details=item.details||item.summary||'';
+        var url=safeLink(item.url);
+        return '<article class="ca-card" data-ca="'+i+'"><div class="ca-top"><div class="ca-num">'+String(item.serial||i+1).padStart(2,'0')+'</div><div class="ca-body"><span class="tag">'+escapeHtml(item.category||'Current Affairs')+'</span><h3>'+escapeHtml(item.title)+'</h3><p>'+escapeHtml(item.summary||'Open the detailed update for more information.')+'</p><div class="ca-actions">'+(details?'<button class="text-btn toggle-details" data-details="'+i+'">Read details <i class="fa-solid fa-chevron-down"></i></button>':'')+(url?'<a class="text-btn" href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer">Open source <i class="fa-solid fa-arrow-up-right-from-square"></i></a>':'')+'</div></div></div><div class="ca-details">'+escapeHtml(details)+'</div></article>'
+      }).join('');
+      Array.prototype.forEach.call(root.querySelectorAll('[data-details]'),function(btn){
+        btn.addEventListener('click',function(){
+          var card=btn.closest('.ca-card');
+          card.classList.toggle('expanded');
+          btn.innerHTML=(card.classList.contains('expanded')?'Hide details ':'Read details ')+'<i class="fa-solid fa-chevron-down"></i>'
+        })
+      });
+      applyCurrentAffairsSearch();
+    }
+    
+    function renderPdf(materials,settings){
+      var list=materials||[];
+      var m=list.filter(function(x){return x.articleUrl||x.url})[0]||list[0]||{};
+      var url=safeLink(m.articleUrl||m.url||(settings||{}).articleUrl||(settings||{}).pdfUrl);
+      var title=m.title||'Current Affairs in Short';
+      var desc=m.description||'Read today’s important current affairs, exam-relevant news and detailed explanations.';
+      var cta=m.ctaText||'Read More';
+      var button=url?'<a class="btn btn-red article-read-more" id="dailyPdfLink" href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> '+escapeHtml(cta)+'</a>':'<span><button class="btn btn-red" disabled style="opacity:.75"><i class="fa-solid fa-link"></i> Read More</button></span>';
+      el('pdfCard').innerHTML='<div class="pdf-card"><div class="pdf-icon"><i class="fa-solid fa-newspaper"></i></div><div class="pdf-copy"><span class="article-label">TODAY’S HIGHLIGHT</span><h3>'+escapeHtml(title)+'</h3><p>'+escapeHtml(desc)+'</p></div>'+button+'</div>';
+    }
+    
+    function clickTextKey(value){return String(value||'').trim().toLowerCase().replace(/\s+/g,' ')}
+    function dashboardResourceKey(examName,title,url){return [examName,title,url].map(clickTextKey).join('||')}
+    function setCountText(nodes,value){Array.prototype.forEach.call(nodes,function(node){node.textContent=(Number(value)||0)+' clicks'})}
+    function getCurrentCount(node){var n=parseInt(String(node.textContent||'0').replace(/[^0-9]/g,''),10);return isFinite(n)?n:0}
+    
+    function trackExamClick(examName,title,url){
+      var examKey=clickTextKey(examName),resourceKey=dashboardResourceKey(examName,title,url);
+      var examNodes=Array.prototype.filter.call(document.querySelectorAll('[data-count-for]'),function(node){return clickTextKey(node.getAttribute('data-count-for'))===examKey});
+      var resourceNodes=Array.prototype.filter.call(document.querySelectorAll('[data-resource-count-for]'),function(node){return node.getAttribute('data-resource-count-for')===resourceKey});
+      setCountText(examNodes,examNodes.length?getCurrentCount(examNodes[0])+1:1);
+      if(title&&url)setCountText(resourceNodes,resourceNodes.length?getCurrentCount(resourceNodes[0])+1:1);
+    }
+    
+    function renderExams(items){
+      var root=el('examList');
+      var jumpWrap=el('examJumpWrap');
+      var jumpNav=el('examJumpNav');
+      if(!items||!items.length){
+        if(jumpWrap)jumpWrap.classList.add('hidden');
+        if(jumpNav)jumpNav.innerHTML='';
+        root.innerHTML='<div class="empty"><i class="fa-solid fa-folder-open"></i><br>No exam resources added yet.</div>';
+        return;
+      }
+      var grouped={};
+      items.forEach(function(x){var name=x.examName||'Other Resources';(grouped[name]||(grouped[name]=[])).push(x)});
+      var names=Object.keys(grouped);
+      var totalResources=items.length;
+      
+      if(jumpWrap)jumpWrap.classList.remove('hidden');
+      if(jumpNav){
+        var allButton='<button type="button" class="exam-jump-card all-exams-card is-active" data-filter-all="true"><span class="exam-jump-icon"><i class="fa-solid fa-layer-group"></i></span><span class="exam-jump-copy"><b>All Exams</b><small>'+names.length+' exams · '+totalResources+' resources</small></span><i class="fa-solid fa-grip exam-jump-arrow"></i></button>';
+        var examButtons=names.map(function(name,i){
+          var resources=grouped[name];
+          var icon=name.toLowerCase().indexOf('norcet')>=0?'fa-user-nurse':name.toLowerCase().indexOf('rrb')>=0?'fa-train':'fa-building-columns';
+          return '<button type="button" class="exam-jump-card" data-jump-target="exam-target-'+i+'" data-jump-name="'+escapeHtml(name)+'"><span class="exam-jump-icon"><i class="fa-solid '+icon+'"></i></span><span class="exam-jump-copy"><b>'+escapeHtml(name)+'</b><small>'+resources.length+' resource'+(resources.length===1?'':'s')+'</small><span class="exam-jump-click-count live-click-count" data-count-for="'+escapeHtml(name)+'">0 clicks</span></span><i class="fa-solid fa-filter exam-jump-arrow"></i></button>';
+        }).join('');
+        jumpNav.innerHTML=allButton+examButtons;
+      }
+      
+      root.innerHTML=names.map(function(name,i){
+        var resources=grouped[name];
+        var icon=name.toLowerCase().indexOf('norcet')>=0?'fa-user-nurse':name.toLowerCase().indexOf('rrb')>=0?'fa-train':'fa-building-columns';
+        return '<section id="exam-target-'+i+'" class="exam-item '+(i===0?'open':'')+'"><button class="exam-trigger" data-exam-name="'+escapeHtml(name)+'" aria-expanded="'+(i===0?'true':'false')+'"><span class="exam-logo"><i class="fa-solid '+icon+'"></i></span><span class="exam-name"><b>'+escapeHtml(name)+'</b><span>'+resources.length+' resource'+(resources.length===1?'':'s')+' available</span></span><span class="exam-count">'+resources.length+' items</span><span class="exam-count live-click-count" data-count-for="'+escapeHtml(name)+'">0 clicks</span><i class="fa-solid fa-chevron-down"></i></button><div class="exam-resources">'+resources.map(function(r){
+          var quiz=String(r.resourceType||'').toLowerCase().indexOf('quiz')>=0;
+          var href=safeLink(r.url);
+          var label=r.ctaText||(quiz?'Attempt Now':'Read Now');
+          var button=href?'<a class="btn tracked-exam-link" href="'+escapeHtml(href)+'" target="_blank" rel="noopener noreferrer" data-exam="'+escapeHtml(name)+'" data-title="'+escapeHtml(r.title)+'" data-url="'+escapeHtml(href)+'">'+(quiz?'<i class="fa-solid fa-arrow-right"></i> ':'<i class="fa-solid fa-arrow-up-right-from-square"></i> ')+escapeHtml(label)+'</a>':linkButton('',label,quiz?'fa-arrow-right':'fa-arrow-up-right-from-square');
+          var countKey=dashboardResourceKey(name,r.title,href);
+          return '<div class="resource"><span class="resource-icon"><i class="fa-solid '+(quiz?'fa-circle-question':'fa-newspaper')+'"></i></span><span class="resource-copy"><b>'+escapeHtml(r.title)+'</b><span>'+escapeHtml(r.description||r.resourceType||'Study resource')+'</span></span><span class="resource-action">'+button+'<small class="resource-click-count" data-resource-count-for="'+escapeHtml(countKey)+'">0 clicks</small></span></div>'
+        }).join('')+'</div></section>';
+      }).join('');
+      
+      if(jumpNav){
+        Array.prototype.forEach.call(jumpNav.querySelectorAll('.exam-jump-card'),function(card){
+          card.addEventListener('click',function(){
+            var showAll=card.getAttribute('data-filter-all')==='true';
+            var targetId=card.getAttribute('data-jump-target');
+            var target=targetId?document.getElementById(targetId):null;
+            if(!showAll&&!target)return;
+            Array.prototype.forEach.call(root.querySelectorAll('.exam-item'),function(item){
+              var trigger=item.querySelector('.exam-trigger');
+              var isTarget=target===item;
+              var visible=showAll||isTarget;
+              item.style.display=visible?'':'none';
+              if(!showAll){
+                item.classList.toggle('open',isTarget);
+                if(trigger)trigger.setAttribute('aria-expanded',isTarget?'true':'false');
+              } else if(trigger) {
+                trigger.setAttribute('aria-expanded',item.classList.contains('open')?'true':'false');
+              }
+            });
+            Array.prototype.forEach.call(jumpNav.querySelectorAll('.exam-jump-card'),function(other){other.classList.toggle('is-active',other===card)});
+            if(showAll){ el('exam-openings').scrollIntoView({behavior:'smooth',block:'start'}); } 
+            else { target.scrollIntoView({behavior:'smooth',block:'start'}); }
+          });
+        });
+      }
+      Array.prototype.forEach.call(root.querySelectorAll('.exam-trigger'),function(btn){
+        btn.addEventListener('click',function(){
+          var item=btn.closest('.exam-item');
+          if(item.style.display==='none')return;
+          item.classList.toggle('open');
+          btn.setAttribute('aria-expanded',item.classList.contains('open')?'true':'false');
+        });
+      });
+      Array.prototype.forEach.call(root.querySelectorAll('.tracked-exam-link'),function(a){
+        a.addEventListener('click',function(){trackExamClick(a.getAttribute('data-exam'),a.getAttribute('data-title'),a.getAttribute('data-url'))})
+      });
+    }
+    
+    function renderPledge(items){
+      var pledge=(items||[]).filter(function(m){
+        var section=String(m.section||'').toLowerCase();
+        return section.indexOf('pledge')>=0 || section.indexOf('commitment')>=0;
+      })[0];
+      if(pledge){
+        el('pledgeHeading').textContent=pledge.heading||"Today's commitment";
+        el('pledgeCopy').textContent=pledge.description||'I will keep showing up for my goals.';
+      }
+    }
+    
+    function renderBatch(items){
+      var root=el('batchList');
+      var list=items||[];
+      if(!list.length){root.innerHTML='<div class="empty"><i class="fa-solid fa-layer-group"></i><br>No batch details added yet.</div>';return}
+      root.innerHTML=list.map(function(b){
+        var title=b.title||b.batchName||'Nursing Preparation Batch';
+        var desc=b.description||'Explore the batch details and prepare with a structured plan.';
+        var url=b.url||'';
+        var cta=b.ctaText||'Explore Batch';
+        return '<article class="batch-card"><div class="batch-copy"><h3>'+escapeHtml(title)+'</h3><p>'+escapeHtml(desc)+'</p></div>'+(url?'<a class="btn" href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(cta)+'</a>':'')+'</article>'
+      }).join('');
+    }
+    
+    function renderDashboard(data){
+      data=data||{}; dashboardData=data;
+      var s=data.settings||{}, top=data.topCard||{}, meta=data.meta||{};
+      var title=s.title||'Top Content for Nursing Aspirants';
+      var headline=top.headline||title;
+      var subtitle=top.supportingCopy||s.subtitle||'A clear daily roundup of current affairs, exam updates and useful study resources.';
+      var todayLabel=el('todayLabel');
+      if(todayLabel)todayLabel.textContent=meta.todayLabel||new Date().toLocaleDateString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+      
+      document.title=title;
+      el('heroHeadline').textContent=headline;
+      el('heroCopy').textContent=subtitle;
+      
+      renderMotivationBoxes(data.mindset||[]);
+      renderCurrentAffairs(data.currentAffairs||[]);
+      renderPdf(data.dailyMaterials||[],s);
+      renderExams(data.examOpenings||[]);
+      renderPledge(data.mindset||[]);
+      renderBatch(data.batch||[]);
+    }
+    
+    el('caSearch').addEventListener('input',applyCurrentAffairsSearch);
+    el('pledgeButton').addEventListener('click',function(){
+      var box=el('pledgeBox');
+      var accepted=box.classList.toggle('accepted');
+      el('pledgeButton').innerHTML=accepted?'<i class="fa-solid fa-check-double"></i> Pledge taken':'<i class="fa-solid fa-check"></i> Take the pledge';
+      showToast(accepted?'Pledge taken. Make today count!':'Pledge reset.');
+    });
+
+    document.addEventListener('DOMContentLoaded',function(){
+      if (typeof STATIC_DASHBOARD_DATA !== 'undefined' && STATIC_DASHBOARD_DATA) {
+        renderDashboard(STATIC_DASHBOARD_DATA);
+      }
+    });
+
+var STATIC_DASHBOARD_DATA = {
+  "meta": {
+    "appName": "Top Content For Nursing Aspirants",
+    "todayLabel": "Mon, 02 Nov 2026",
+    "lastUpdated": "02 Nov 2026"
+  },
+  "settings": {
+    "title": "Top Content For Nursing Aspirants",
+    "subtitle": "A clear daily roundup of current affairs, exam updates, and useful study resources."
+  },
+  "topCard": {
+    "examName": "Content of the Day for Nursing Aspirants",
+    "headline": "Your daily selection briefing",
+    "supportingCopy": "Even when no one sees your struggle, every step you take is building your future as a Nursing Officer.",
+    "edition": "Daily Edition",
+    "tagline": "Prepare. Practise. Progress."
+  },
+  "mindset": [
+    {
+      "section": "Motivation",
+      "heading": "Every hour you dedicate to your preparation is bringing you one step closer.",
+      "description": "Keep revising, testing, and improving your Nursing fundamentals."
+    },
+    {
+      "section": "Motivation",
+      "heading": "Some days will feel harder than others, but progress is still happening.",
+      "description": "Every small step you take today is building the future you have been working so hard for."
+    },
+    {
+      "section": "Motivation",
+      "heading": "Believe in the effort you have put in.",
+      "description": "Your consistency will slowly turn your doubts into confidence."
+    },
+    {
+      "section": "Pledge",
+      "heading": "Today's commitment",
+      "description": "I will show up, give my best, and complete my daily targets with dedication. My dreams deserve my effort."
+    }
+  ],
+  "currentAffairs": [
+    {
+      "serial": "1",
+      "title": "AIIA-iCAINE Marks 6th Foundation Day",
+      "summary": "Merging Ayurveda with Artificial Intelligence at the 6th Foundation Day of AIIA-iCAINE.",
+      "category": "Current Affairs",
+      "date": "30 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/168999"
+    },
+    {
+      "serial": "2",
+      "title": "Ayush Ministry Issues Skin Disorder Treatment Guidelines",
+      "summary": "New guidelines issued across four traditional systems for treating skin disorders.",
+      "category": "Current Affairs",
+      "date": "30 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/168467"
+    },
+    {
+      "serial": "3",
+      "title": "ICMR Centre for High Altitude Medicine",
+      "summary": "Public Health Research center established in Keylong, Himachal Pradesh.",
+      "category": "Current Affairs",
+      "date": "30 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/168460"
+    },
+    {
+      "serial": "4",
+      "title": "Indo-UK Health Conclave 2026",
+      "summary": "Elevating Traditional Medicine and Global Healthcare Integration.",
+      "category": "Current Affairs",
+      "date": "30 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/168404"
+    },
+    {
+      "serial": "5",
+      "title": "5th ERMED Consortium National Conference",
+      "summary": "Redefining Digital Access in Medical Education across the nation.",
+      "category": "Current Affairs",
+      "date": "30 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/168340"
+    },
+    {
+      "serial": "6",
+      "title": "Commemorative Stamps on Breast Cancer Awareness Issued by Department of Posts",
+      "summary": "Department of Posts issues commemorative stamps for breast cancer awareness.",
+      "category": "Current Affairs",
+      "date": "31 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/169028"
+    },
+    {
+      "serial": "7",
+      "title": "Current Affairs In Short (31st October, 2026)",
+      "summary": "A concise wrap-up of the day's top headlines.",
+      "category": "Current Affairs",
+      "date": "31 October 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/169008"
+    },
+    {
+      "serial": "8",
+      "title": "Current Affairs In Short (01st November, 2026)",
+      "summary": "A concise wrap-up of the day's top headlines.",
+      "category": "Current Affairs",
+      "date": "01 November 2026",
+      "url": "https://app.adda247.com/install?link=current_affairs/169051"
+    }
+  ],
+  "dailyMaterials": [
+    {
+      "title": "Current Affairs In Short (01st Nov)",
+      "description": "Daily current affairs and important updates for Nursing aspirants.",
+      "ctaText": "Read More",
+      "articleUrl": "https://app.adda247.com/install?link=current_affairs/169051",
+      "url": "https://app.adda247.com/install?link=current_affairs/169051",
+      "order": 1
+    }
+  ],
+  "examOpenings": [
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "Article",
+      "title": "Daily Vocab Booster: 30 Must-Know Words for Competitive Exams | 02 Nov 2026",
+      "description": "Improve your vocabulary.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263850"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "PDF",
+      "title": "Musculoskeletal Nursing: Fracture Risks & Mobility Guidelines",
+      "description": "Key notes on musculoskeletal nursing.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=power_capsule/1445"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "Quiz",
+      "title": "Nursing Daily Dose: 3 Questions 30 Seconds Quiz",
+      "description": "Quick daily practice.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159182"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "Article",
+      "title": "Daily Vocab Booster: 30 Must-Know Words for Competitive Exams | 31 Oct 2026",
+      "description": "Improve your vocabulary.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263769"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "PDF",
+      "title": "All Nursing Exams: Top 100 Questions Asked",
+      "description": "Important previous year questions.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=magazines/21260"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "PDF",
+      "title": "Cardiac, Respiratory, CNS Drugs & Specific Antidotes",
+      "description": "Pharmacology key notes.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=magazines/21139"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "PDF",
+      "title": "Drug Calculations, IV Flow Rates, Metric Conversions & Toxicities",
+      "description": "Formulas and toxicity charts.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=magazines/21037"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "PDF",
+      "title": "Sterilization, Disinfection, Barrier Nursing & Hospital Waste Management",
+      "description": "Infection control guidelines.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=magazines/20896"
+    },
+    {
+      "examName": "All Nursing Exams",
+      "resourceType": "Quiz",
+      "title": "Nursing Daily Dose: 3 Questions 30 Seconds Quiz",
+      "description": "Quick daily practice.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1113432"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent : CHN Quiz",
+      "description": "Community Health Nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1157174"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent : Pharmacology Quiz",
+      "description": "Pharmacology practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1157210"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent : FON Quiz",
+      "description": "Fundamentals of Nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159844"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent : Mental Health Nursing Quiz",
+      "description": "Psychiatric nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159850"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Article",
+      "title": "Important Signs For RRB Nursing Superintendent Exam 2026",
+      "description": "Crucial signs and symptoms.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263866"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Article",
+      "title": "RRB Nursing Superintendent 2026: What To Study At This Time?",
+      "description": "Strategic preparation guide.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263354"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Article",
+      "title": "RRB Nursing Superintendent 2026 | OBG List of Top Expected Topics",
+      "description": "Obstetrics & Gynecology topics.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263450"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Article",
+      "title": "RRB Nursing Superintendent 2026 Revision Countdown Begins",
+      "description": "Boost your preparation daily.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=job_alerts/124205"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "PDF",
+      "title": "RRB Nursing Superintendent A to Z Master Notes – Free PDF",
+      "description": "Comprehensive notes PDF.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=job_alerts/123315"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "PDF",
+      "title": "RRB Nursing Superintendent General Science Mind Map Capsule",
+      "description": "General science mind maps.",
+      "ctaText": "Download PDF",
+      "url": "https://app.adda247.com/install?link=magazines/21121"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent: FON Quiz",
+      "description": "Fundamentals of Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131046"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent: Pediatrics Quiz",
+      "description": "Pediatric nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131005"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent: CHN Quiz",
+      "description": "Community Health Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131044"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent: Anatomy & Physiology Quiz",
+      "description": "Anatomy & Physiology practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131047"
+    },
+    {
+      "examName": "RRB Nursing Superintendent",
+      "resourceType": "Quiz",
+      "title": "RRB Nursing Superintendent: Mental Health Nursing Quiz",
+      "description": "Psychiatric nursing questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131006"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse : CHN Quiz",
+      "description": "Community Health Nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1157232"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse : Pediatrics Quiz",
+      "description": "Pediatrics practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159140"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Article",
+      "title": "In-Hand Salary of a Newly Recruited WB Staff Nurse",
+      "description": "Salary breakdown and perks.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263651"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Article",
+      "title": "WB Staff Nurse Selection Process: The Complete Roadmap",
+      "description": "Detailed selection procedure.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263464"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse: FON Quiz",
+      "description": "Fundamentals of Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131116"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse: Pharmacology Quiz",
+      "description": "Pharmacology questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131149"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse: CHN Quiz",
+      "description": "Community Health Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131114"
+    },
+    {
+      "examName": "WBHRB Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "WBHRB Staff Nurse: Mental Health Nursing Quiz",
+      "description": "Psychiatric nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131117"
+    },
+    {
+      "examName": "AIIMS NORCET 12",
+      "resourceType": "Quiz",
+      "title": "AIIMS NORCET 12 : Pharmacology Quiz",
+      "description": "Pharmacology practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159141"
+    },
+    {
+      "examName": "AIIMS NORCET 12",
+      "resourceType": "Article",
+      "title": "How to Crack AIIMS NORCET 12 Exam? Complete Roadmap",
+      "description": "Preparation strategy and tips.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263350"
+    },
+    {
+      "examName": "AIIMS NORCET 12",
+      "resourceType": "Quiz",
+      "title": "AIIMS NORCET 12: Obstetric & Gynecological Nursing Quiz",
+      "description": "OBG practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131182"
+    },
+    {
+      "examName": "AIIMS NORCET 12",
+      "resourceType": "Quiz",
+      "title": "AIIMS NORCET 12: FON Quiz",
+      "description": "Fundamentals of Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131181"
+    },
+    {
+      "examName": "AIIMS NORCET 12",
+      "resourceType": "Quiz",
+      "title": "AIIMS NORCET 12: Pediatrics Quiz",
+      "description": "Pediatrics practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131183"
+    },
+    {
+      "examName": "AIIMS CRE",
+      "resourceType": "Quiz",
+      "title": "AIIMS CRE Nursing officer: Pediatric (Child Health) Nursing Quiz",
+      "description": "Pediatric Nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1153628"
+    },
+    {
+      "examName": "AIIMS CRE",
+      "resourceType": "Article",
+      "title": "AIIMS CRE 6 Big Update, Check Official Notice",
+      "description": "Latest updates and exam notices.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=job_alerts/124247"
+    },
+    {
+      "examName": "AIIMS CRE",
+      "resourceType": "Quiz",
+      "title": "AIIMS CRE Nursing officer: Pediatric Quiz",
+      "description": "Child Health Nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1031909"
+    },
+    {
+      "examName": "AIIMS CRE",
+      "resourceType": "Quiz",
+      "title": "AIIMS CRE Nursing Officer: Medical-Surgical Nursing Quiz",
+      "description": "Medical-Surgical Nursing practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1153626"
+    },
+    {
+      "examName": "RRB Pharmacist",
+      "resourceType": "Quiz",
+      "title": "RRB Pharmacist : Pharmaceutical Chemistry Quiz",
+      "description": "Pharmaceutical Chemistry practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159181"
+    },
+    {
+      "examName": "KGMU Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "KGMU Nursing Officer Quiz",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1159837"
+    },
+    {
+      "examName": "KGMU Nursing Officer",
+      "resourceType": "Article",
+      "title": "Don't Stop Now: Why KGMU Nursing Officer Exam Delay is a Blessing in Disguise",
+      "description": "Strategic insights on exam delay.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263856"
+    },
+    {
+      "examName": "KGMU Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "KGMU Nursing Officer Quiz 1",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1130967"
+    },
+    {
+      "examName": "KGMU Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "KGMU Nursing Officer Quiz 2",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1130966"
+    },
+    {
+      "examName": "KGMU Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "KGMU Nursing Officer Quiz",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1130968"
+    },
+    {
+      "examName": "SGPGI Nursing Officer Mains",
+      "resourceType": "Article",
+      "title": "Last 10-Day Final Strategy for SGPGI Nursing Officer Mains",
+      "description": "Revision plan for the last 10 days.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263257"
+    },
+    {
+      "examName": "SGPGI Nursing Officer Mains",
+      "resourceType": "Article",
+      "title": "SGPGI Nursing Officer Mains Admit Card 2026 OUT",
+      "description": "Check exam notice and admit card.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=job_alerts/124282"
+    },
+    {
+      "examName": "SGPGI Nursing Officer Mains",
+      "resourceType": "Quiz",
+      "title": "SGPGI Nursing Officer Main Quiz 1",
+      "description": "Mains practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1142690"
+    },
+    {
+      "examName": "SGPGI Nursing Officer Mains",
+      "resourceType": "Quiz",
+      "title": "SGPGI Nursing Officer Main Quiz 2",
+      "description": "Mains practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1142689"
+    },
+    {
+      "examName": "SGPGI Nursing Officer Mains",
+      "resourceType": "Quiz",
+      "title": "SGPGI Nursing Officer Main Quiz",
+      "description": "Mains practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1142691"
+    },
+    {
+      "examName": "PGIMER Nursing Officer",
+      "resourceType": "Article",
+      "title": "27 Days Final Power Schedule For PGIMER Nursing Officer Exam",
+      "description": "Strategic study plan.",
+      "ctaText": "Read Now",
+      "url": "https://app.adda247.com/install?link=notes_articles/263129"
+    },
+    {
+      "examName": "PGIMER Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "PGIMER Nursing Officer Quiz 1",
+      "description": "Subject-specific quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131277"
+    },
+    {
+      "examName": "PGIMER Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "PGIMER Nursing Officer Quiz 2",
+      "description": "Subject-specific quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131276"
+    },
+    {
+      "examName": "PGIMER Nursing Officer",
+      "resourceType": "Quiz",
+      "title": "PGIMER Nursing Officer Quiz",
+      "description": "Subject-specific quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131279"
+    },
+    {
+      "examName": "GIMS Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "GIMS Staff Nurse Quiz 1",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131245"
+    },
+    {
+      "examName": "GIMS Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "GIMS Staff Nurse Quiz 2",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131244"
+    },
+    {
+      "examName": "GIMS Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "GIMS Staff Nurse Quiz",
+      "description": "Practice questions.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131246"
+    },
+    {
+      "examName": "Bihar Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "Bihar Staff Nurse Quiz",
+      "description": "State specific nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131079"
+    },
+    {
+      "examName": "Bihar Staff Nurse",
+      "resourceType": "Quiz",
+      "title": "Bihar Staff Nurse Quiz",
+      "description": "State specific nursing quiz.",
+      "ctaText": "Attempt Now",
+      "url": "https://app.adda247.com/install?link=daily_quiz/1131080"
+    }
+  ],
+  "batch": [
+    {
+      "batchName": "NURSING MAHAPACK",
+      "title": "Nursing Mahapack for AIIMS NORCET, RRB & State Exams",
+      "description": "Comprehensive live classes, test series, and e-books for all Nursing competitive exams.",
+      "ctaText": "Grab Now",
+      "url": "https://www.adda247.com/product-onlineliveclasses/88372/nursing-mahapack?srsltid=AfmBOoopXwqjjPAsRkk5ZeHPCul2tP14lKi9nRHIw_NA06Z72vynISXX&productId=90881"
+    }
+  ]
+};
+  </script>
+
